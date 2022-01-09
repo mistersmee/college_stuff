@@ -19,11 +19,11 @@ print("After interchange, the value of number 1 is",num1, "and that of number 2 
 num1 = int(input("Enter a number:"))
 num2 = int(input("Enter another number:"))
 
-add = num1+num2
-sub = num1-num2
-mult = num1*num2
-div = num1/num2
-mod = num1%num2
+add = num1 + num2
+sub = num1 - num2
+mult = num1 * num2
+div = num1 / num2
+mod = num1 % num2
 
 print("The addition of the given numbers is:",add)
 print("The subtraction of the given numbers is:",sub)
@@ -37,7 +37,7 @@ print("The modulo (remainder of their division) of the given numbers is:",mod)
 pi = float(input("Enter the value of pi:"))
 r = int(input("Enter the radius of the circle:"))
 
-area = pi*r*r
+area = pi * r * r
 
 print("The area of the circle with radius",r,"is:",area)
 
@@ -48,7 +48,7 @@ print("The area of the circle with radius",r,"is:",area)
 b = int(input("Enter the value of base of the triangle:"))
 h = int(input("Enter the value of height of the triangle:"))
 
-area = 0.5*b*h
+area = 0.5 * b * h
 
 print("The area of a triangle with base",b,"and height",h,"is:",area)
 
@@ -58,7 +58,7 @@ print("The area of a triangle with base",b,"and height",h,"is:",area)
 
 l = int(input("Enter the value of the length of a side of a square:"))
 
-area = l*l
+area = l * l
 
 print("The area of a square with sides",l,"is:",area)
 
@@ -69,7 +69,7 @@ print("The area of a square with sides",l,"is:",area)
 l = int(input("Enter the value of the length of a rectangle:"))
 b = int(input("Enter the value of the breadth of a rectangle:"))
 
-area = l*b
+area = l * b
 
 print("The area of a rectangle with length",l,"and breadth",b,"is:",area)
 
@@ -80,7 +80,7 @@ prin = int(input("Enter the value of principal amount:"))
 yrs = int(input("Enter the time period of the investment:"))
 rate = float(input("Enter the rate of simple interest:"))
 
-si = (prin*yrs*rate)/100
+si = (prin * yrs * rate) / 100
 
 print("The simple interest on your investment is:",si)
 
@@ -105,7 +105,7 @@ num3 = float(input("Enter the marks scored in subject 3:"))
 num4 = float(input("Enter the marks scored in subject 4:"))
 num5 = float(input("Enter the marks scored in subject 5:"))
 
-avg = (num1+num2+num3+num4+num5)/5
+avg = (num1 + num2 + num3 + num4 + num5) / 5
 
 print("The average of 5 numbers",num1,",",num2,",",num3,",",num4,",",num5,"is:",avg)
 
@@ -118,7 +118,7 @@ test1 = int(input("Enter the score for test 1:"))
 test2 = int(input("Enter the score for test 2:"))
 test3 = int(input("Enter the score for test 3:"))
 
-avg = (test1+test2+test3)/3
+avg = (test 1 + test2 + test3) / 3
 
 print("The average score is:",avg)
 
@@ -130,7 +130,7 @@ if avg >= HIGH_SCORE:
 
 num = int(input("Enter a number:"))
 
-if (num%2==0):
+if (num % 2 == 0):
     print("The given number is even.")
 else:
     print("The number is odd.")
