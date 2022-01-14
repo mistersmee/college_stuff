@@ -26,7 +26,7 @@ print("The modulo (remainder of their division) of the given numbers is:",mod)
 
 ## Area of circle
 
-pi = float(input("Enter the value of pi:"))
+pi = 3.14
 r = int(input("Enter the radius of the circle:"))
 
 area = pi * r * r
@@ -75,14 +75,14 @@ r = int(input("Enter the radius of the circle:"))
 
 peri = pi * 2 * r
 
-print("The area of the circle with radius",r,"is:",peri)
+print("The perimeter of the circle with radius",r,"is:",peri)
 
 
 # Perimeter of triangle
 
-side1 = float(input("Enter the value of side 1 of a triangle"))
-side2 = float(input("Enter the value of side 2 of a triangle"))
-side3 = float(input("Enter the value of side 3 of a triangle"))
+side1 = float(input("Enter the value of side 1 of a triangle:"))
+side2 = float(input("Enter the value of side 2 of a triangle:"))
+side3 = float(input("Enter the value of side 3 of a triangle:"))
 
 peri = side1 + side2 + side3
 
