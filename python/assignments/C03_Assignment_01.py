@@ -139,7 +139,6 @@ print("After interchange, the value of number 1 is",num1, "and that of number 2 
 # 7. Perform Python Program to Convert Kilometers to Miles. ( 1 kilometer = 0.621371 miles)
 
 km_dist = 231
-
 mil_mult = 0.621371
 
 mil_dist = km_dist * mil_mult
@@ -151,7 +150,6 @@ print("Your travelled",km_dist,"km distance in miles is:",mil_dist)
 
 
 cel_temp = 24
-
 fah_temp = ( 1.8 * cel_temp ) +32
 
 print("Your temperature",cel_temp,"°C in Fahrenheit is:",fah_temp, "°F")
