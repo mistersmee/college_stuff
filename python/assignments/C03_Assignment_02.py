@@ -105,7 +105,7 @@ print("The perimeter of a square with sides",l,"is:",peri)
 l = int(input("Enter the value of the length of a rectangle:"))
 b = int(input("Enter the value of the breadth of a rectangle:"))
 
-area = 2 * (l + b)
+peri = 2 * (l + b)
 
 print("The perimeter of a rectangle with length",l,"and breadth",b,"is:",peri)
 
@@ -167,6 +167,7 @@ print("Name:",name)
 print("Address:",address)
 print("Mobile Number:",mobile)
 print("Email ID:",email)
+print("Marks of 3 subjects:\n\tPhysics:",num1,"\n\tChemistry:",num2,"\n\tMaths:",num3,"","\n\tTotal marks PCM group subject:", num1 + num2 + num3)
 print("Average marks of PCM group :",avg)
 
 # 5. Write a python program to find out sale price of an Item.
@@ -175,9 +176,11 @@ print("Average marks of PCM group :",avg)
 # subtracted. (Take data from user side / from keyboard)
 
 orig_price  = float(input("Enter the original price of the item:"))
-disc_price = orig_price - ( 0.2 * orig_price )
+disc = float(input("Enter the percentage discounted:"))
+real_disc = disc / 100
+disc_price = orig_price - ( real_disc * orig_price )
 
-print("The 20% off discounted price of the item is:",disc_price)
+print("The",disc,"% off discounted price of the item is:",disc_price)
 
 # 6. Write a python program to calculate the average of the three test scores. Perform the calculation and
 # store the result in the average variable:
