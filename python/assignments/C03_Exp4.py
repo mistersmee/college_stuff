@@ -2,6 +2,13 @@
 # encoding: utf-8
 
 # 1. Write a program to Calculate division obtain by student.
+# Percentage Grade
+# >= 80         A+
+# >= 75         A
+# >= 60         B
+# >= 45         C
+# >= 35         D
+# < 35          Fail
 
 AP_SCORE = 80
 A_SCORE = 75
@@ -65,7 +72,7 @@ if ( year % 4 == 0 ):
 else:
     print('%d is not a leap year' %year)
 
-# 5.         Write a C program to input electricity unit charge and calculate the total electricity bill according to the given condition:
+# 5. Write a program to input electricity unit charge and calculate the total electricity bill according to the given condition:
 # ·        For first 50 units Rs. 0.50/unit
 # ·        For next 100 units Rs. 0.75/unit
 # ·        For next 100 units Rs. 1.20/unit
@@ -74,17 +81,23 @@ else:
 
 units = int(input('Enter your electricity usage units:'))
 
-if units < 50:
+if units <= 50:
     bill = 0.50 * units
+    surch = 0.20 * bill
+    bill = bill + surch
     print('Your electricity bill is Rs. %f' %bill)
-elif units >= 50 and units < 150:
+elif units > 50 and units <= 150:
     bill = 0.75 * units
+    surch = 0.20 * bill
+    bill = bill + surch
     print('Your electricity bill is Rs. %f' %bill)
-elif units >= 150 and units < 250:
+elif units > 150 and units <= 250:
     bill = 1.20 * units
+    surch = 0.20 * bill
+    bill = bill + surch
     print('Your electricity bill is Rs. %f' %bill)
 else:
-    bill = 1.20 * units
+    bill = 1.50 * units
     surch = 0.20 * bill
     bill = bill + surch
     print('Your electricity bill is Rs. %f' %bill)
@@ -99,13 +112,15 @@ if op == '+':
     print('The addition of the two numbers is:', add)
 elif op == '-':
     sub = num1 - num2
-    print('The subtraction of two numbers is:', sub)
+    print('The subtraction of the two numbers is:', sub)
 elif op == '*':
     mult = num1 * num2
-    print('The multiplication of two numbers is:', mult)
+    print('The multiplication of the two numbers is:', mult)
 elif op == '/':
     div = num1 / num2
-    print('The division of two numbers is:',div)
+    print('The division of the two numbers is:', div)
+else:
+    print('Operation not permitted.')
 
 # 7. Write a program to display days in month based on user input month number.
 
@@ -129,12 +144,12 @@ else:
 
 # 9. Write a program to check given username and password (both integer) if correct then display “Login Successfully” otherwise display “Try Again”.
 login = int(input('Enter a numeric username:'))
-password = int(input('Enter the numeric password: '))
+password = int(input('Enter a numeric password: '))
 
 if login == '812838938' and password == '832948924848':
     print('Login Successfully.')
 else:
-    print('Try Again')
+    print('Try Again.')
 
 
 # 10. Write a program for deciding candidate is eligible for marriage or not (Consider gender also M/F).
