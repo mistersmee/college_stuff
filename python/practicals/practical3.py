@@ -45,9 +45,13 @@ if salary >= MIN_SALARY:
     if years_on_job >= MIN_YEARS:
         print('You qualify for the loan.')
     else:
-        print('You must have been employed 'for at least {MIN_YEARS} 'years to qualify.')
+        print(f'You must have been employed '
+              f'for at least {MIN_YEARS} '
+              f'years to qualify.')
 else:
-    print('You must earn at least $' '{MIN_SALARY:,.2f}' 'per year to qualify.')
+    print(f'You must earn at least $'
+          f'{MIN_SALARY:,.2f} '
+          f'per year to qualify.')
 
 # if-elif-else
 
@@ -77,3 +81,33 @@ else:
                 print('Your grade is D.')
             else:
                 print('Your grade is F.')
+
+year = int(input('Please enter a Year:'))
+
+if ( year % 4 == 0 ):
+    if ( year % 100 == 0 ):
+        if ( year % 400 == 0):
+            print('%d is a leap year' %year)
+        else:
+            print('%d is not a leap year' %year)
+    else:
+        print('%d is a leap year' %year)
+else:
+    print('%d is not a leap year' %year)
+
+month = int(input('Enter the month number:'))
+year = int(input('Enter the year:'))
+
+if(month == '1','3','5','7','9','11'):
+    print('Number of days is 11')
+elif((month ==2) and ((year % 400 == 0) or (year%4 == 0 and year%100!=0))):
+     print('Number of days is 29')
+else:
+     print('Number of days is 30')
+
+ch = input('Enter a character:')
+
+if(ch == 'A' or ch == 'a' or ch == 'E' or ch == 'e' or ch =='I' or ch == 'i' or ch == 'O' or ch =='o' or ch == 'U' or ch == 'u'):
+    print(ch, 'is a vowel')
+else:
+    print(ch, 'is a consonant')
