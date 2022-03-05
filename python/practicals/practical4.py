@@ -20,7 +20,7 @@ i = 0
 while i < len(s):
     print(f'At index {i},element is {s[i]}')
     i += 1
-    
+
 # Use for loop to print elements from the list
 for i in s:
     print(i)
@@ -154,7 +154,7 @@ for i in test:
         print('Element present.')
     else:
         print('Element absent.')
-        
+
 if 4 in test:
     print('Element present.')
 
@@ -208,20 +208,20 @@ empty_tuple = ()
 print (empty_tuple)
 
 # Creating non-empty tuples
- 
+
 tup = ('python', 'geeks')
 
 print(tup)
 
 # Code for concatenating 2 tuples
- 
+
 tuple1 = (0, 1, 2, 3)
 tuple2 = ('python', 'geek')
- 
+
 print(tuple1 + tuple2)
 
 # Code for creating nested tuples
- 
+
 tuple1 = (0, 1, 2, 3)
 tuple2 = ('python', 'geek')
 tuple3 = (tuple1, tuple2)
@@ -229,7 +229,7 @@ tuple3 = (tuple1, tuple2)
 print(tuple3)
 
 # code to test slicing
- 
+
 tuple1 = (0 ,1, 2, 3)
 
 print(tuple1[1:])
@@ -237,7 +237,7 @@ print(tuple1[::-1])
 print(tuple1[2:4])
 
 # Code for printing the length of a tuple
- 
+
 tuple2 = ('python', 'geek')
 
 print(len(tuple2))
