@@ -344,6 +344,16 @@ def get_total(value_list):
     
     return total
 
+numbers = []
+k = 'y'
+while k == 'y':
+    s = int(input('Enter a number:'))
+    numbers.append(s)
+    k = input('Do you want to enter more numbers?[y/n]:')
+
+print(numbers)
+print(f'The total is {get_total(numbers)}.')
+
 # P18
 
 sales = []
