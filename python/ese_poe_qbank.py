@@ -160,6 +160,36 @@ else:
 
 # P8
 
+A_SCORE = 90
+B_SCORE = 80
+C_SCORE = 70
+D_SCORE = 60
+
+def calc_avg(*scores):
+	avg = (score1 + score2 + score3 + score4 + score5) / 5
+	return avg
+
+def determine_grade(score):
+    if score >= A_SCORE:
+        print('Your grade is A.')
+    elif score >= B_SCORE:
+        print('Your grade is B.')
+    elif score >= C_SCORE:
+        print('Your grade is C.')
+    elif score >= D_SCORE:
+        print('Your grade is D.')
+    else:
+        print('Your grade is F.')
+    
+score1 = int(input('Enter score of test 1:'))    
+score2 = int(input('Enter score of test 2:'))  
+score3 = int(input('Enter score of test 3:'))  
+score4 = int(input('Enter score of test 4:'))  
+score5 = int(input('Enter score of test 5:')) 
+
+avg = calc_avg(score1,score2,score3,score4,score5)
+determine_grade(avg)
+
 
 # P9
 
@@ -270,13 +300,6 @@ prime()
 
 # P16
 
-file = open('aseem.txt', 'w')
-
-file.write('Aseem Athale\n')
-file.write('C03\n')
-
-file.close()
-
 try:
     f = open('aseem.txt')
     f.close()
@@ -288,7 +311,15 @@ except FileNotFoundError:
     f = open('aseem.txt', 'w')
     f.close()
     
-    print('aseem.txt created.')
+    print('aseem.txt created.'
+    )
+    f = open('aseem.txt', 'w')
+    
+    f.write('Aseem Athale\n')
+    f.write('C03\n')
+    
+    f.close()
+    print('Wrote name and roll number to file.')
 
     f = open('aseem.txt', 'a')
 
@@ -500,6 +531,45 @@ def listodd():
 listodd()
 
 # P30
+
+try:
+    f = open('sales.txt','r')
+    f.close()
+
+except:
+    print('sales.txt file not found.')
+    k = input('Do you want to create sales.txt?[y/n]:')
+    
+    
+    if k == 'y':
+        print('Creating file now.')
+
+        f = open('sales.txt','w')
+
+        f.write('24987.62')
+        f.write('26978.97')
+        f.write('32589.45')
+        f.write('31978.47')
+        f.write('22781.76')
+        f.write('29871.44')
+
+        f.close()
+    else:
+        print('Exiting...')
+        quit()
+
+else:
+    f = open('sales.txt','w')
+
+    f.write('24987.62')
+    f.write('26978.97')
+    f.write('32589.45')
+    f.write('31978.47')
+    f.write('22781.76')
+    f.write('29871.44')
+
+    f.close()
+    
 
 # P31
 
