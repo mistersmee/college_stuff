@@ -4,7 +4,7 @@ int
 rnum()
 {
 	// Reverse number
-  int num, rem, rnum = 0, i = 0;
+  int num, rem, rnum = 0;
 
   printf("Enter a number:");
   scanf("%d", &num);
@@ -24,7 +24,7 @@ int
 pal()
 {
 	// Palindrome
-  int num, ornum, rem, rnum = 0, i = 0;
+  int num, ornum, rem, rnum = 0;
 
   printf("\nEnter a number:");
   scanf("%d", &num);
@@ -52,7 +52,7 @@ int
 sum()
 {
 	// Sum of digits of a number
-  int num, orgnum, rem, sum = 0, i = 0;
+  int num, orgnum, rem, sum = 0;
 
   printf("\nEnter a number:");
   scanf("%d", &num);
