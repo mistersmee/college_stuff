@@ -3,31 +3,31 @@
 int
 evenodd()
 {
-	int num, i;
+	int num;
 	printf("Enter a number:");
 	scanf("%d", &num);
-	for ( i = 0; i <= num; i += 2) {
-		if (i == num) {
-			printf("\nThe number is even.");
+		if (num & 1) {
+				printf("\nThe number is odd.");
 		} else {
-			printf("\nThe number is odd.");
+			printf("\nThe number is even.");
 		}
-	}
+
+		return 0;
 }
 
 int
 floyd()
 {
    int i, j, n, p, q;
-   
+
    printf("\nInput number of rows:");
    scanf("%d", &n);
-   
+
    for ( i = 1 ; i <= n ; i++) {
-    	if( i % 2 == 0) { 
+    	if( i % 2 == 0) {
 	   		p = 1;
 	   		q = 0;
-		} else { 
+		} else {
 	    	p = 0;
 			q = 1;
 		}
@@ -40,6 +40,8 @@ floyd()
 		}
 		printf("\n");
    }
+
+	 return 0;
 }
 
 int
