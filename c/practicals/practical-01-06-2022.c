@@ -56,10 +56,11 @@ div(int a, int b)
 int
 factorial(int n)
 {
-  if (n == 0)
+  if (n == 0) {
     return 1;
-  else
+  } else {
     return(n * factorial(n-1));
+  }
 }
 
 void
@@ -67,17 +68,17 @@ swap (int a, int b)
 {
     int temp;
     temp = a;
-    a=b;
-    b=temp;
+    a = b;
+    b = temp;
     printf("\nAfter swapping values in function a = %d, b = %d\n",a,b);
 }
 
 void
 change(int *num)
 {
-    printf("\nBefore adding value inside function num=%d \n",*num);
+    printf("\nBefore adding value inside function num = %d \n",*num);
     (*num) += 100;
-    printf("\nAfter adding value inside function num=%d \n", *num);
+    printf("\nAfter adding value inside function num = %d \n", *num);
 }
 
 int main()
@@ -117,9 +118,9 @@ int main()
     printf("\nAfter swapping values in main a = %d, b = %d\n", a, b);
 
     int x = 100;
-    printf("\nBefore function call x=%d \n", x);
+    printf("\nBefore function call x = %d \n", x);
     change(&x);
-    printf("\nAfter function call x=%d \n", x);
+    printf("\nAfter function call x = %d \n", x);
 
     int array[10], i;
 
@@ -153,5 +154,7 @@ int main()
         }
         printf("\n");
     }
+    
+    
     return 0;
 }
