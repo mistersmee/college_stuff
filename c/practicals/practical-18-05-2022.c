@@ -132,20 +132,20 @@ int
 switch_demo()
 {
 	int a;
-	printf("Enter a number:");
+	printf("\nEnter a number:");
 	scanf("%d", &a);
 	switch (a) {
 		case 1:
-			printf("You have entered the first case.");
+			printf("\nYou have entered the first case.");
 			break;
 		case 2:
-			printf("You have entered the second case.");
+			printf("\nYou have entered the second case.");
 			break;
 		case 3:
-			printf("You have entered the third case.");
+			printf("\nYou have entered the third case.");
 			break;
 		default:
-			printf("Invalid number.");
+			printf("\nInvalid number.");
 			break;
 	}
 
@@ -158,12 +158,12 @@ nestedif()
 
 	int n;
 
-	printf("Enter a number:");
+	printf("\nEnter a number:");
 	scanf("%d",&n);
 
 	if (n % 2 == 0){
 
-	    printf("Even ");
+	    printf("\nEven ");
 
 	    if (n % 4 == 0) {
 	        printf("and divisible by 4");
@@ -171,7 +171,7 @@ nestedif()
 	        printf("and not divisible by 4");
 	    }
 	} else {
-	    printf("Odd ");
+	    printf("\nOdd ");
 
 	    if(n % 3 == 0) {
 	        printf("and divisible by 3");
@@ -182,7 +182,7 @@ nestedif()
 	}
 
 	return 0;
-}
+}	
 int
 main()
 {
