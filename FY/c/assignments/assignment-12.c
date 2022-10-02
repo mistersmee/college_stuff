@@ -15,8 +15,8 @@ main()
    fclose(file);
 	//fscanf()
    if (file = fopen("hello.txt", "r")){
-         while(fscanf(file,"%s", str)!=EOF){
-         printf("%s", str);
+	 while(fscanf(file,"%s", str)!=EOF){
+	 printf("%s", str);
       }
    }
    else

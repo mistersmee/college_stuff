@@ -51,12 +51,12 @@ q1()
     c = &a1;
 
     for (i = 0; i < 10; i++) {
-        printf("\nEnter value in array a1[%d]:", i);
-        scanf("%d", &a1[i]);
+	printf("\nEnter value in array a1[%d]:", i);
+	scanf("%d", &a1[i]);
     }
 
     for (i = 0; i < 10; i++) {
-        printf("\nArray a1[%d] stored at %u having value %d", i, c, (*c)[i]);
+	printf("\nArray a1[%d] stored at %u having value %d", i, c, (*c)[i]);
     }
 
     //Pointer to structure

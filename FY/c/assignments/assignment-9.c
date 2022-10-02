@@ -10,11 +10,11 @@ void isPalindrome(char str[])
     // Keep comparing characters while they are same
     while (h > l)
     {
-        if (str[l++] != str[h--])
-        {
-            printf("%s is not a palindrome\n", str);
-            return;
-        }
+	if (str[l++] != str[h--])
+	{
+	    printf("%s is not a palindrome\n", str);
+	    return;
+	}
     }
     printf("%s is a palindrome\n", str);
 }
@@ -30,10 +30,10 @@ q1()
     printf("\nThe length of the string a is: %lu", strlen(a) - 1);
 
     while( a[i] != '\0' ) {
-        if ( a[i] == 'a' ) {
-            a[i] = 'm';
-        }
-        i++;
+	if ( a[i] == 'a' ) {
+	    a[i] = 'm';
+	}
+	i++;
     }
 
     printf("\nAfter replacing 'a' in string with 'm', we get: %s", a);
@@ -60,7 +60,7 @@ q3()
     fgets(input, 10, stdin);
 
     while( input[length] != '\0' ) {
-        length++;
+	length++;
     }
 
     printf("%i\n", length - 1 );
@@ -77,7 +77,7 @@ q4()
     printf("string s1 : %s\n", s1);
 
     for (i = 0; s1[i] != '\0'; ++i) {
-        s2[i] = s1[i];
+	s2[i] = s1[i];
     }
 
     s2[i] = '\0';

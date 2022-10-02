@@ -158,13 +158,13 @@ struct q4struct q4func()
 {
 	struct q4struct s1;
 
-  	printf("\nEnter a number: ");
+	printf("\nEnter a number: ");
 	getchar();
-    	scanf ("%d", &s1.a);
+	scanf ("%d", &s1.a);
 
-      	printf("\nEnter another number: ");
+	printf("\nEnter another number: ");
 	getchar();
-        scanf("%d", &s1.b);
+	scanf("%d", &s1.b);
 
 	return s1;
 }

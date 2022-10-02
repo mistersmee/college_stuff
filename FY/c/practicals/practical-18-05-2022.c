@@ -48,7 +48,7 @@ case_check()
 	scanf("%c", &check_char);
 
 	( check_char >= 'a' && check_char <= 'z' ) ? printf("\nThe given character is lowercase.")
-	                    	: printf("\nThe give character is uppercase.");
+				: printf("\nThe give character is uppercase.");
 
 	return 0;
 }
@@ -166,23 +166,23 @@ nestedif()
 	    printf("\nEven ");
 
 	    if (n % 4 == 0) {
-	        printf("and divisible by 4");
+		printf("and divisible by 4");
 	    } else {
-	        printf("and not divisible by 4");
+		printf("and not divisible by 4");
 	    }
 	} else {
 	    printf("\nOdd ");
 
 	    if(n % 3 == 0) {
-	        printf("and divisible by 3");
+		printf("and divisible by 3");
 	    } else {
-	        printf("and not divisible by 3");
+		printf("and not divisible by 3");
 	    }
 
 	}
 
 	return 0;
-}	
+}
 int
 main()
 {

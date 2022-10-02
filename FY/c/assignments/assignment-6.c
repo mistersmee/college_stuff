@@ -10,24 +10,24 @@ q1()
 
     // 1D
     for (i = 0; i < 3; i++) {
-        printf("Enter the numbers for array a[%d]:", i);
-        scanf("%d", &a[i]);
+	printf("Enter the numbers for array a[%d]:", i);
+	scanf("%d", &a[i]);
     }
     //2D
     for (i = 0; i < 3; i++) {
-        for (j = 0; j < 3; j++) {
-            printf("\nEnter the number for array b[%d][%d]", i, j);
-            scanf("%d", &b[i][j]);
-        }
+	for (j = 0; j < 3; j++) {
+	    printf("\nEnter the number for array b[%d][%d]", i, j);
+	    scanf("%d", &b[i][j]);
+	}
     }
     //3D
     for (i = 0; i < 3; i++) {
-        for (j = 0; j < 3; j++) {
-            for (k = 0; k < 3; k++) {
-                printf("\nEnter the numbers for array c[%d][%d][%d]", i, j, k);
-                scanf("%d", &c[i][j][k]);
-            }
-        }
+	for (j = 0; j < 3; j++) {
+	    for (k = 0; k < 3; k++) {
+		printf("\nEnter the numbers for array c[%d][%d][%d]", i, j, k);
+		scanf("%d", &c[i][j][k]);
+	    }
+	}
     }
 
     return 0;
@@ -40,12 +40,12 @@ q2()
     int i;
 
     for (i = 0; i < 3; i++) {
-        printf("\nEnter the numbers for array a[%d]:", i);
-        scanf("%d", &a[i]);
+	printf("\nEnter the numbers for array a[%d]:", i);
+	scanf("%d", &a[i]);
     }
 
     for (i = 0; i < 3; i++) {
-        printf("\nThe array element a[%d] at memory address [%d] is: %d", i, &a[i], a[i]);
+	printf("\nThe array element a[%d] at memory address [%d] is: %d", i, &a[i], a[i]);
     }
 
      return 0;
@@ -153,12 +153,12 @@ q5()
     int second_max = 0;
 
     for( int i = 0; i < 10; i++ ) {
-        if( a[i] > max ) {
-            second_max = max;
-            max = a[i];
-        } else if( a[i] > second_max ) {
-            second_max = a[i];
-        }
+	if( a[i] > max ) {
+	    second_max = max;
+	    max = a[i];
+	} else if( a[i] > second_max ) {
+	    second_max = a[i];
+	}
     }
 
     printf("max: %d, second_max: %d\n", max, second_max);
@@ -189,20 +189,20 @@ q7()
     int i, arr[10], revarr[10];
     printf("Enter 10 elements in an array: ");
     for(i = 0; i < 10; i++) {
-        scanf("%d",&arr[i]);
+	scanf("%d",&arr[i]);
     }
     printf("The array is: \n");
     for(i = 0; i < 10; i++) {
-        printf(" %d ",arr[i]);
+	printf(" %d ",arr[i]);
     }
     for(i = 0; i < 10; i++)
     {
-        revarr[i] = arr[9-i];
+	revarr[i] = arr[9-i];
     }
     printf("\nThe reverse array is: \n");
     for(i = 0;i < 10; i++)
     {
-        printf(" %d ",revarr[i]);
+	printf(" %d ",revarr[i]);
     }
 
 		return 0;
@@ -215,36 +215,36 @@ q8()
     int poscount = 0, negcount = 0, zerocount = 0;
     printf("Enter 10 integers: ");
     for( i = 0; i < 10; i++) {
-        scanf("%d",&arr[i]);
+	scanf("%d",&arr[i]);
     }
     printf("The array is: ");
     for(i = 0; i < 10; i++) {
-        printf(" %d ",arr[i]);
+	printf(" %d ",arr[i]);
     }
     for(i = 0;i < 10; i++)
     {
-        if(arr[i] > 0) {
-            pos[poscount] = arr[i];
-            poscount++;
-        } else if(arr[i] < 0) {
-            neg[negcount] = arr[i];
-            negcount++;
-        } else {
-            zero[zerocount] = arr[i];
-            zerocount++;
-        }
+	if(arr[i] > 0) {
+	    pos[poscount] = arr[i];
+	    poscount++;
+	} else if(arr[i] < 0) {
+	    neg[negcount] = arr[i];
+	    negcount++;
+	} else {
+	    zero[zerocount] = arr[i];
+	    zerocount++;
+	}
     }
     printf("\nThe array of positive elements is: ");
     for(i = 0; i < poscount; i++) {
-        printf(" %d ",pos[i]);
+	printf(" %d ",pos[i]);
     }
     printf("\nThe array of negative number is: ");
     for (i = 0;i < negcount; i++) {
-        printf("%d ",neg[i]);
+	printf("%d ",neg[i]);
     }
     printf("\nThe array of zero elements is: ");
     for(i = 0;i < zerocount; i++) {
-        printf("%d ",zero[i]);
+	printf("%d ",zero[i]);
     }
 
 		return 0;

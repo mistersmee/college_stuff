@@ -4,7 +4,7 @@
 /*
  *
  *   1. Write a sample C program to illustrate different loops used in C language
- *        (for , while ,do-while, nested loops with for, while and do-while loop)
+ *	  (for , while ,do-while, nested loops with for, while and do-while loop)
  *
  */
 int forLoop(int n);
@@ -46,7 +46,7 @@ forLoop(int n)
     int mul = 1;
     for(int i=1;i<=n;i++)
     {
-        mul = mul*i;
+	mul = mul*i;
     }
     return mul;
 }
@@ -57,9 +57,9 @@ whileLoop(int n)
     int rem,sum=0;
     while(n>0)
     {
-        rem = n%10;
-        sum = sum + rem;
-        n = n/10;
+	rem = n%10;
+	sum = sum + rem;
+	n = n/10;
     }
     return sum;
 }
@@ -70,9 +70,9 @@ dowhileLoop(int n)
     int rem,rev=0;
     do
     {
-        rem = n%10;
-        rev = rev*10 + rem;
-        n = n/10;
+	rem = n%10;
+	rev = rev*10 + rem;
+	n = n/10;
     }
     while(n>0);
     return rev;
@@ -84,11 +84,11 @@ nestedForLoop(int n)
     int i,j;
     for(i=0;i<n;i++)
     {
-        for(j=0;j<=i;j++)
-        {
-            printf("* ");
-        }
-        printf("\n");
+	for(j=0;j<=i;j++)
+	{
+	    printf("* ");
+	}
+	printf("\n");
     }
 }
 
@@ -99,15 +99,15 @@ nestedWhileLoop(int n)
     int i=1,j;
     while(i<=n)
     {
-        j=1;
-        while(j<=n)
-        {
-            printf("%d ",j);
-            j++;
-        }
-            printf("\n");
-            i++;
-        }
+	j=1;
+	while(j<=n)
+	{
+	    printf("%d ",j);
+	    j++;
+	}
+	    printf("\n");
+	    i++;
+	}
 
 }
 
@@ -117,14 +117,14 @@ nestedDoWhileLoop(int n)
     int i=1,j;
     do
     {
-        j=1;
-        do
-        {
-            printf("%d ",j);
-            j++;
-        }while(j<=i);
-        printf("\n");
-        i++;
+	j=1;
+	do
+	{
+	    printf("%d ",j);
+	    j++;
+	}while(j<=i);
+	printf("\n");
+	i++;
     }while(i<=n);
 }
 
@@ -143,7 +143,7 @@ q2()
     scanf("%d",&n);
     for(i=1;i<=n;i++)
     {
-        mul = mul*i;
+	mul = mul*i;
     }
     printf("The factorial of %d is: %d\n",n,mul);
 
@@ -170,24 +170,24 @@ q3()
     // condition for real and different roots
     if (discriminant > 0)
     {
-        root1 = (-b + sqrt(discriminant)) / (2 * a);
-        root2 = (-b - sqrt(discriminant)) / (2 * a);
-        printf("root1 = %.2lf and root2 = %.2lf", root1, root2);
+	root1 = (-b + sqrt(discriminant)) / (2 * a);
+	root2 = (-b - sqrt(discriminant)) / (2 * a);
+	printf("root1 = %.2lf and root2 = %.2lf", root1, root2);
     }
 
-        // condition for real and equal roots
+	// condition for real and equal roots
     else if (discriminant == 0)
     {
-        root1 = root2 = -b / (2 * a);
-        printf("root1 = root2 = %.2lf;", root1);
+	root1 = root2 = -b / (2 * a);
+	printf("root1 = root2 = %.2lf;", root1);
     }
 
-        // if roots are not real
+	// if roots are not real
     else
     {
-        realPart = -b / (2 * a);
-        imagPart = sqrt(-discriminant) / (2 * a);
-        printf("root1 = %.2lf+%.2lfi and root2 = %.2f-%.2fi", realPart, imagPart, realPart, imagPart);
+	realPart = -b / (2 * a);
+	imagPart = sqrt(-discriminant) / (2 * a);
+	printf("root1 = %.2lf+%.2lfi and root2 = %.2f-%.2fi", realPart, imagPart, realPart, imagPart);
     }
 
     return 0;
@@ -195,7 +195,7 @@ q3()
 
 /*
  *   4. Write a C program to list all the prime numbers between 1 and n, where n is a value
- *       supplied by the user.
+ *	 supplied by the user.
  */
 
 int
@@ -206,29 +206,29 @@ q4()
     scanf("%d",&n);
     for(i=1;i<=n;i++)
     {
-        count = 0;
-        for(j=2;j<i;j++)
-        {
-            if (i%j==0)
-            {
-                count++;
-                break;
-            }
-        }
-        if(count==0 && i!=1)
-        {
-            printf("%d ", i);
-        }
+	count = 0;
+	for(j=2;j<i;j++)
+	{
+	    if (i%j==0)
+	    {
+		count++;
+		break;
+	    }
+	}
+	if(count==0 && i!=1)
+	{
+	    printf("%d ", i);
+	}
     }
     return 0;
 }
 
 /*
  *   5. Write a program in C to make such a pattern like a pyramid with numbers increased by 1
- *                1 
- *               2 3 
- *              4 5 6 
- *             7 8 9 10
+ *  		  1 
+ *		 2 3 
+ *		4 5 6 
+ *	       7 8 9 10
  *
  */
 
@@ -238,15 +238,15 @@ q5()
     int i,j,n=4,k=1;
     for(i=0;i<n;i++)
     {
-        for(j=0;j<(n-i);j++)
-        {
-            printf(" ");
-        }
-        for(j=0;j<=i;j++)
-        {
-            printf("%d ",k++);
-        }
-        printf("\n");
+	for(j=0;j<(n-i);j++)
+	{
+	    printf(" ");
+	}
+	for(j=0;j<=i;j++)
+	{
+	    printf("%d ",k++);
+	}
+	printf("\n");
     }
 
     return 0;
@@ -254,17 +254,17 @@ q5()
 
 /*
  *  6. Write a C program to read temperature in centigrade and display a suitable message
- *       according to temperature state below : 
- *           Temp &lt; 0 then Freezing weather
- *           Temp 0-10 then Very Cold weather
- *           Temp 10-20 then Cold weather
- *           Temp 20-30 then Normal in Temp
- *           Temp 30-40 then Its Hot
- *           Temp &gt;=40 then Its Very Hot
- *      Test Data :
- *          42
- *      Expected Output :
- *           Its very hot.
+ *	 according to temperature state below : 
+ *	     Temp &lt; 0 then Freezing weather
+ *	     Temp 0-10 then Very Cold weather
+ *	     Temp 10-20 then Cold weather
+ *	     Temp 20-30 then Normal in Temp
+ *	     Temp 30-40 then Its Hot
+ *	     Temp &gt;=40 then Its Very Hot
+ *	Test Data :
+ *	    42
+ *	Expected Output :
+ *	     Its very hot.
  *
  */
 
@@ -276,39 +276,39 @@ q6()
     scanf("%d",&temp);
     if(temp>=40)
     {
-        printf("Its very hot");
+	printf("Its very hot");
     }
     else if(temp>=30)
     {
-        printf("Its hot");
+	printf("Its hot");
     }
     else if(temp>=20)
     {
-        printf("Normal");
+	printf("Normal");
     }
     else if(temp>=10)
     {
-        printf("Cold");
+	printf("Cold");
     }
     else if(temp>=0)
     {
-        printf("Very Cold weather");
+	printf("Very Cold weather");
     }
     else
     {
-        printf("Freezing weather");
+	printf("Freezing weather");
     }
 }
 
 /*
  *    7. Write a C program to find the eligibility of admission for a professional course based on
- *           the following criteria:
- *               Marks in Maths &gt;=65
- *               Marks in Phy &gt;=55
- *               Marks in Chem&gt;=50
- *           Total in all three subject &gt;=190
- *           or
- *           Total in Math and Physics &gt;=140
+ *	     the following criteria:
+ *		 Marks in Maths &gt;=65
+ *		 Marks in Phy &gt;=55
+ *		 Marks in Chem&gt;=50
+ *	     Total in all three subject &gt;=190
+ *	     or
+ *	     Total in Math and Physics &gt;=140
  *
  */
 
@@ -320,15 +320,15 @@ q7()
     scanf("%d %d %d",&m,&p,&c);
     if(m>=65 && p>=55 && c>=50)
     {
-        printf("Eligible for admission");
+	printf("Eligible for admission");
     }
     else if(m+p+c>=190 || m+p>=140)
     {
-        printf("Eligible for admission");
+	printf("Eligible for admission");
     }
     else
     {
-        printf("Not eligible for admission");
+	printf("Not eligible for admission");
     }
 }
 
@@ -352,42 +352,42 @@ q8()
 
     if(amount >= 500)
     {
-        note500 = amount/500;
-        amount = amount - note500 * 500;
+	note500 = amount/500;
+	amount = amount - note500 * 500;
     }
     if(amount >= 100)
     {
-        note100 = amount/100;
-        amount = amount - note100 * 100;
+	note100 = amount/100;
+	amount = amount - note100 * 100;
     }
     if(amount >= 50)
     {
-        note50 = amount/50;
-        amount = amount - note50 * 50;
+	note50 = amount/50;
+	amount = amount - note50 * 50;
     }
     if(amount >= 20)
     {
-        note20 = amount/20;
-        amount = amount - note20 * 20;
+	note20 = amount/20;
+	amount = amount - note20 * 20;
     }
     if(amount >= 10)
     {
-        note10 = amount/10;
-        amount = amount - note10 * 10;
+	note10 = amount/10;
+	amount = amount - note10 * 10;
     }
     if(amount >= 5)
     {
-        note5 = amount/5;
-        amount = amount - note5 * 5;
+	note5 = amount/5;
+	amount = amount - note5 * 5;
     }
     if(amount >= 2)
     {
-        note2 = amount /2;
-        amount = amount - note2 * 2;
+	note2 = amount /2;
+	amount = amount - note2 * 2;
     }
     if(amount >= 1)
     {
-        note1 = amount;
+	note1 = amount;
     }
 
     printf("Number of 500 Rs notes = %d\n", note500);

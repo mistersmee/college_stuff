@@ -119,7 +119,7 @@ if veg == 1:
           f'\n\t2: Palak Paneer:         Rs. 150'
           f'\n\t3. Paneer Kebab:         Rs. 200'
           f'\n\t4. Roti:                 Rs. 20')
-    
+
     keep_going = 'y'
     while keep_going == 'y':
         dish = int(input('Enter a dish you want [1/2/3/4]:'))
@@ -141,7 +141,7 @@ else:
           f'\n\t2: Kolhapuri Mutton: Rs. 350'
           f'\n\t3. Chicken Kebab:    Rs. 200'
           f'\n\t4. Roti:             Rs. 20')
-    
+
     keep_going = 'y'
     while keep_going == 'y':
         dish = int(input('Enter a dish you want [1/2/3/4]:'))
@@ -166,8 +166,8 @@ C_SCORE = 70
 D_SCORE = 60
 
 def calc_avg(*scores):
-	avg = (score1 + score2 + score3 + score4 + score5) / 5
-	return avg
+    avg = (score1 + score2 + score3 + score4 + score5) / 5
+    return avg
 
 def determine_grade(score):
     if score >= A_SCORE:
@@ -180,12 +180,12 @@ def determine_grade(score):
         print('Your grade is D.')
     else:
         print('Your grade is F.')
-    
-score1 = int(input('Enter score of test 1:'))    
-score2 = int(input('Enter score of test 2:'))  
-score3 = int(input('Enter score of test 3:'))  
-score4 = int(input('Enter score of test 4:'))  
-score5 = int(input('Enter score of test 5:')) 
+
+score1 = int(input('Enter score of test 1:'))
+score2 = int(input('Enter score of test 2:'))
+score3 = int(input('Enter score of test 3:'))
+score4 = int(input('Enter score of test 4:'))
+score5 = int(input('Enter score of test 5:'))
 
 avg = calc_avg(score1,score2,score3,score4,score5)
 determine_grade(avg)
@@ -222,10 +222,10 @@ for i in range(0, n):
 
 def food(*top):
     item = 'bread'
-    
+
     print(f'item = {item}')
     print('Toppings:')
-    
+
     for s in top:
         print(f'\t{s}')
 
@@ -248,7 +248,7 @@ sum = 0
 while i >= 0:
     i = int(input('Enter positive numbers:'))
     if i > 0:
-        sum += i 
+        sum += i
     else:
         print('Negative number entered, stopping series.')
         break
@@ -307,16 +307,16 @@ try:
 except FileNotFoundError:
     print("File doesn't exist. FileNotFoundError occured.")
     print('Creating file now.')
-    
+
     f = open('aseem.txt', 'w')
     f.close()
-    
+
     print('aseem.txt created.')
     f = open('aseem.txt', 'w')
-    
+
     f.write('Aseem Athale\n')
     f.write('C03\n')
-    
+
     f.close()
     print('Wrote name and roll number to file.')
 
@@ -341,7 +341,7 @@ def get_total(value_list):
     for i in range(0,6):
         for s in value_list:
             total += s
-    
+
     return total
 
 numbers = []
@@ -474,7 +474,7 @@ res = {}
 
 for i in MyList:
     res[i] = MyList.count(i)
-    
+
 print(res)
 
 # P27
@@ -505,7 +505,7 @@ def get_total(value_list):
 
     for s in value_list:
         total += s
-    
+
     return total
 
 numbers = []
@@ -548,8 +548,8 @@ try:
 except:
     print('sales.txt file not found.')
     k = input('Do you want to create sales.txt?[y/n]:')
-    
-    
+
+
     if k == 'y':
         print('Creating file now.')
 
@@ -578,13 +578,13 @@ else:
     f.write('29871.44')
 
     f.close()
-    
+
 
 # P31
 
 month = int(input('Enter the month number:'))
 year= int(input('Enter the year:'))
-    
+
 if((month == 2) and ((year % 4== 0)  or ((year %100 == 0) and (year % 400 == 0)))):
     print("Number of days is 29");
 
@@ -602,9 +602,9 @@ else :
 def add():
     num1 = 50
     num2 = 2025325
-    
+
     sum = num1 + num2
-    
+
     print(sum)
 
 add()
@@ -612,9 +612,9 @@ add()
 def sub(num1,num2):
     num1 = num1
     num2 = num2
-    
+
     sub = num1 - num2
-    
+
     print(sub)
 
 num1 = int(input('Enter a number:'))
@@ -627,9 +627,9 @@ sub(num1, num2)
 def mul(num1, num2):
     num1 = num1
     num2 = num2
-    
+
     mul = num1 * num2
-    
+
     return mul
 
 num1 = int(input('Enter a number:'))
@@ -640,9 +640,9 @@ print(mul(num1, num2))
 def div():
     num1 = 500
     num2 = 100
-    
+
     div = num1 / num2
-    
+
     return div
 
 print(div())
@@ -677,19 +677,19 @@ k = input('Do you want to start the game?[y/n]:')
 
 while k =='y':
     j = random.choice(kids)
-    
+
     c1 = j.count(kids[0])
     tc1 += c1
-    
+
     c2 = j.count(kids[1])
     tc2 += c2
-    
+
     c3 = j.count(kids[2])
     tc3 += c3
-    
+
     c4 = j.count(kids[3])
     tc4 += c4
-    
+
     c5 = j.count(kids[4])
     tc4 += c4
 

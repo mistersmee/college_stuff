@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-## Dictionaries 
+## Dictionaries
 
 # Basic printing of values in dictionary
 
@@ -44,7 +44,7 @@ print(phonebook)
 phonebook.update({'Katie' : '555-2222'})
 print(phonebook)
 
-# Using the popitem() function 
+# Using the popitem() function
 
 key, value = phonebook.popitem()
 print(key, value)
@@ -66,7 +66,7 @@ print(x)
 # Checking for key using if statements
 
 if 'Chris' in phonebook:
-	print('Yes, Chris is in the phonebook.')
+    print('Yes, Chris is in the phonebook.')
 
 # Using the pop() function to nuke a specified key-value pair
 phonebook.pop('Cassandra')
@@ -109,7 +109,7 @@ print(set)
 print(len(set))
 
 set2 = {1,2,3,4,5,6,7,8}
-set3 = {True, False, False, True}     #Duplicates are not allowed, only {False, True} printed. 
+set3 = {True, False, False, True}     #Duplicates are not allowed, only {False, True} printed.
 
 print(set2)
 print(set3)
@@ -126,7 +126,7 @@ print(type(set))
 set = {'apple', 'banana', 'cherry'}
 
 for x in set:
-	print(x)
+    print(x)
 
 # Using the add() function to add items to the set
 
@@ -150,7 +150,7 @@ set.update(tuple)
 print(set)
 
 # Using the remove() and the discard() function to remove items from the list
-# discard() doesn't give an exception, whereas remove() throws a KeyError 
+# discard() doesn't give an exception, whereas remove() throws a KeyError
 # exception when we ask to remove an item which isn't present
 
 set = {'apple', 'banana', 'orange'}

@@ -125,34 +125,34 @@ int main()
     int array[10], i;
 
     for (i = 0; i < 10; i++) {
-        printf("\nEnter a number [%d]:", i);
-        scanf("%d", &array[i]);
+	printf("\nEnter a number [%d]:", i);
+	scanf("%d", &array[i]);
     }
 
     printf("The array is:");
 
     for (i = 0; i < 10; i++) {
-        printf(" [%d] ", array[i]);
+	printf(" [%d] ", array[i]);
 
     }
 
     int array2[5][3], j, k;
 
     for (j = 0; j < 5; j++) {
-        for (k = 0; k < 3; k++) {
-            printf("\nEnter the number in array [%d][%d]:", j, k);
-            scanf("%d", &array2[j][k]);
-        }
+	for (k = 0; k < 3; k++) {
+	    printf("\nEnter the number in array [%d][%d]:", j, k);
+	    scanf("%d", &array2[j][k]);
+	}
     }
 
     printf("\nThe array is:");
 
     for (j = 0; j < 5; j++) {
-        printf("\nThe row [%d] is:", j);
-        for (k = 0; k < 3; k++) {
-            printf(" | %d |", array2[j][k]);
-        }
-        printf("\n");
+	printf("\nThe row [%d] is:", j);
+	for (k = 0; k < 3; k++) {
+	    printf(" | %d |", array2[j][k]);
+	}
+	printf("\n");
     }
 
 

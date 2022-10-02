@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # encoding: utf-8
 
-# 1. Write a program to print Restaurant Name. 
+# 1. Write a program to print Restaurant Name.
 # Give choice to user- 1.Veg   2.NonVeg.
 # If Veg: print menu list as 1: Paneer tikka=100rs 2: Palak Paneer=150rs 3.Paneer kabab=200rs 4.roti=20rs
 # if user chooses 2 dish print the bill. for example if user choose 1st and 2nd dish the bill will be 250rs.
@@ -26,7 +26,7 @@ if veg == 1:
           f'\n\t2: Palak Paneer:         Rs. 150'
           f'\n\t3. Paneer Kebab:         Rs. 200'
           f'\n\t4. Roti:                 Rs. 20')
-    
+
     i = 0
     while i <= 1:
         dish = int(input('Enter a dish you want [1/2/3/4]:'))
@@ -48,7 +48,7 @@ else:
           f'\n\t2: Kolhapuri Mutton: Rs. 350'
           f'\n\t3. Chicken Kebab:    Rs. 200'
           f'\n\t4. Roti:             Rs. 20')
-    
+
     i = 0
     while i <= 1:
         dish = int(input('Enter a dish you want [1/2/3/4]:'))
@@ -67,7 +67,7 @@ else:
 
 
 #2. Sum of Numbers
-# Write a program with a loop that asks the user to enter a series of positive numbers. 
+# Write a program with a loop that asks the user to enter a series of positive numbers.
 # The user should enter a negative number to signal the end of the series.
 #  After all the positive numbers have been entered, the program should display their sum.
 
@@ -77,7 +77,7 @@ sum = 0
 while i >= 0:
     i = int(input('Enter positive numbers:'))
     if i > 0:
-        sum += i 
+        sum += i
     else:
         print('Negative number entered, stopping series.')
         break

@@ -10,7 +10,7 @@ file.write('C03\n')
 
 file.close()
 
-# 2. Write a code to add your PRN into exisiting file. 
+# 2. Write a code to add your PRN into exisiting file.
 
 try:
     f = open('prn.txt')
@@ -18,16 +18,16 @@ try:
 
 except FileNotFoundError:
     print("File doesn't exist. FileNotFoundError occured.")
-    
+
     print('Creating file now.')
-    
+
     f = open('prn.txt', 'w')
     f.close()
-    
+
     print('prn.txt created.')
 
     f = open('prn.txt', 'a')
-    
+
     f.write(input('Enter your PRN:'))
-    
+
     f.close()

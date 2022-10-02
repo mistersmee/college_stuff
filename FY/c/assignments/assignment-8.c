@@ -11,17 +11,17 @@ int q1()
 
     if(ptr==NULL)
     {
-        printf("Memory not available");
-        exit(0);
+	printf("Memory not available");
+	exit(0);
     }
     for(i=0;i<n;i++)
     {
-        printf("Enter an integer: ");
-        scanf("%d",ptr+i);
+	printf("Enter an integer: ");
+	scanf("%d",ptr+i);
     }
     for(i=0;i<n;i++)
     {
-        printf("Integer is: %d\n",*(ptr+i));
+	printf("Integer is: %d\n",*(ptr+i));
     }
     return 0;
 }

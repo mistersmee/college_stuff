@@ -1,12 +1,12 @@
 #include <stdio.h>
 /*
  *   1. Write a C program to read the values of x and y and print the results of the following expressions in one line:
- *       i. (x + y) / (x - y)
- *       ii. (x + y)(x - y)
+ *	 i. (x + y) / (x - y)
+ *	 ii. (x + y)(x - y)
  *
  */
 
-int 
+int
 q1()
 {
     int x,y,a,b;
@@ -15,7 +15,7 @@ q1()
     a =  (x+y) / (x - y);
     b = (x+y)*(x-y);
     printf("%d %d",a,b);
-    
+
     return 0;
 }
 
@@ -24,14 +24,14 @@ q1()
  *
  */
 
-int 
+int
 q2()
 {
-    
+
     // Arithmetic
 
     int a = 9,b = 4, c;
-    
+
     c = a+b;
     printf("a+b = %d \n",c);
     c = a-b;
@@ -42,7 +42,7 @@ q2()
     printf("a/b = %d \n",c);
     c = a%b;
     printf("Remainder when a divided by b = %d \n",c);
-   
+
     // Increment/Decrement
 
     int e = 10, f = 100;
@@ -53,23 +53,23 @@ q2()
     printf("++c = %f \n", ++g);
     printf("--d = %f \n", --d);
 
-    // Assignment 
+    // Assignment
 
     int a1 = 5, c1;
 
-    c1 = a1;      // c is 5
+    c1 = a1;	  // c is 5
     printf("c = %d\n", c);
-    c1 += a1;     // c is 10 
+    c1 += a1;	  // c is 10
     printf("c = %d\n", c);
-    c1 -= a1;     // c is 5
+    c1 -= a1;	  // c is 5
     printf("c = %d\n", c);
-    c1 *= a1;     // c is 25
+    c1 *= a1;	  // c is 25
     printf("c = %d\n", c);
-    c1 /= a1;     // c is 5
+    c1 /= a1;	  // c is 5
     printf("c = %d\n", c);
-    c1 %= a1;     // c = 0
+    c1 %= a1;	  // c = 0
     printf("c = %d\n", c);
-    
+
     // Relational
 
     int a2 = 5, b2 = 5, c2 = 10;
@@ -109,39 +109,39 @@ q2()
     printf("!(a3 == b3) is %d \n", result);
 
     // Conditional
-    int a4 = 10; 
+    int a4 = 10;
     int b4 = 15;
     int x = ( a > b )? a : b;
     printf("%d", x);
-    
+
     // Bitwise
-    
+
     // AND
     int a5 = 12, b5 = 25;
     printf("Output = %d", a5 & b5);
-    
+
     // OR
     int a6 = 12, b6 = 25;
     printf("Output = %d", a6 | b6);
-        
+
     // XOR
     int a7 = 12, b7 = 25;
     printf("Output = %d", a6 ^ b6);
-    
+
     // Complement
     printf("Output = %d\n",~35);
     printf("Output = %d\n",~-12);
-       
+
     // Shift
-    
+
     int num=212, i;
     for (i=0; i<=2; ++i)
-        printf("Right shift by %d: %d\n", i, num>>i);
+	printf("Right shift by %d: %d\n", i, num>>i);
 
      printf("\n");
 
-     for (i=0; i<=2; ++i) 
-        printf("Left shift by %d: %d\n", i, num<<i);    
+     for (i=0; i<=2; ++i)
+	printf("Left shift by %d: %d\n", i, num<<i);
 
     // Special Operators
     // sizeof
