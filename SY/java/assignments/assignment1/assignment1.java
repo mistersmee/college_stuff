@@ -23,6 +23,9 @@ public class assignment1 {
 
 	public static void q1a() {
 		System.out.println("Hello World!");
+		System.out.println("The command for changing the directory is `cd`, "
+				+ " the command to compile java code is `javac <filename.java>` " +
+				" and the command to run the compiled java code is `java <filename>`.");
 	}
 
 	public static void q2() {
