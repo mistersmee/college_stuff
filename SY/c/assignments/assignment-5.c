@@ -37,19 +37,18 @@ dequeue()
 	}
 }
 
-void
-display()
-{
-	int i = front;
-	if(front == -1 && rear == -1) {
-		printf("\n Queue is empty.");
-	} else {
-		printf("\nElements in a Queue are:");
-		while(i <= rear) {
-			printf(" %d ", queue[i]);
-			i++;
-		}
-	}
+void 
+display() {
+        int i;
+        if(front == -1 && rear == -1) {
+                printf("\n Queue is empty.");
+        } else {
+                printf("\n Elements in the queue are: ");
+                for (i = front; i != rear; i = (i + 1) % max) {
+                        printf("%d ", queue[i]);
+                }
+                printf("%d ", queue[i]);
+        }
 }
 
 int
