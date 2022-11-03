@@ -1,7 +1,7 @@
-/* 
+/*
  *  Q1:
- *    
- *   The output of Question 1 is: 
+ *
+ *   The output of Question 1 is:
  *        Hello I am null
  *        My age is: 0
  *
@@ -41,7 +41,7 @@
 */
 
 public class assignment4 {
-    public class Person {    
+    public class Person {
         String name;
         int age;
         Person() {
@@ -59,7 +59,7 @@ public class assignment4 {
         public static void main(String args[]) {
         	Person James = new Person();
         	James.talk();
-        	
+
             Person Emma = new Person();
             Emma.talk();
         }

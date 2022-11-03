@@ -34,7 +34,7 @@ main()
 		printf("\n\nEnter your choice:");
 		scanf("%d", &choice);
 		switch(choice) {
-			case 1: 
+			case 1:
 				begininsert();
 				break;
 			case 2:
@@ -62,7 +62,7 @@ main()
 }
 
 void
-begininsert() 
+begininsert()
 {
 	struct node *ptr;
 	int data;
@@ -101,10 +101,10 @@ randominsert()
 {
 	struct node *ptr, *trgt;
 	int i, loc;
-	
+
 	printf("Enter the location you want to insert data at:");
 	scanf("%d", &loc);
-	
+
 	ptr = head;
 	for (i = 0; i < loc; i++) {
 		ptr = ptr->next;
@@ -159,10 +159,10 @@ randomdelete()
 {
 	struct node *ptr, *trgt;
 	int i, loc;
-	
+
 	printf("Enter the location you want to insert data at:");
 	scanf("%d", &loc);
-	
+
 	ptr = head;
 	for (i = 0; i < loc; i++) {
 		trgt = ptr;

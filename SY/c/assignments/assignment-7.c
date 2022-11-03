@@ -4,6 +4,7 @@
 struct node {
 	int data;
 	struct node *next;
+	struct node *prev;
 };
 
 struct node *head;
@@ -66,11 +67,24 @@ begininsert()
 {
 	struct node *ptr;
 	int data;
-	ptr = malloc(sizeof(struct node));
+
 	printf("Enter the element you want to enter:");
-	scanf("%d", &ptr->data);
-	ptr->next = head;
-	head = ptr;
+	scanf("%d", &data);
+
+	if (head == NULL) {
+		ptr = malloc(sizeof(struct node));
+		ptr->next = NULL;
+		ptr->data = data;
+		ptr->prev = NULL;
+		head = ptr;
+	} else {
+		ptr = malloc(sizeof(struct node));
+		ptr->prev = NULL;
+		ptr->data = data;
+		ptr->next = head;
+		head->prev = ptr;
+		head = ptr;
+	}
 }
 
 void
@@ -82,6 +96,7 @@ lastinsert()
 		printf("Enter the element you want to enter:");
 		scanf("%d", &ptr->data);
 		ptr->next = NULL;
+		ptr->prev = NULL;
 		head = ptr;
 	} else {
 		ptr = head;
@@ -92,6 +107,7 @@ lastinsert()
 		printf("Enter the element you want to enter:");
 		scanf("%d", &last->data);
 		last->next = NULL;
+		last->prev = ptr;
 		ptr->next = last;
 	}
 }
@@ -117,6 +133,7 @@ randominsert()
 	printf("Enter the element you want to enter:");
 	scanf("%d", &trgt->data);
 	trgt->next = ptr->next;
+	trgt->next->prev = trgt;
 	ptr->next = trgt;
 }
 
@@ -129,6 +146,7 @@ begindelete()
 	} else {
 		ptr = head;
 		head = head->next;
+		head->prev = NULL;
 		free(ptr);
 	}
 }
@@ -145,10 +163,9 @@ lastdelete()
 	} else {
 		ptr = head;
 		while (ptr->next != NULL) {
-			del = ptr;
 			ptr = ptr->next;
 		}
-		del->next = NULL;
+		ptr->prev->next = NULL;
 		free(ptr);
 	}
 }
@@ -157,23 +174,28 @@ lastdelete()
 void
 randomdelete()
 {
-	struct node *ptr, *trgt;
-	int i, loc;
+	struct node *ptr, *temp;
+	int val;
 
-	printf("Enter the location you want to insert data at:");
-	scanf("%d", &loc);
+	printf("\nEnter the data after which the node is to be deleted:");
+	scanf("%d", &val);
 
 	ptr = head;
-	for (i = 0; i < loc; i++) {
-		trgt = ptr;
+
+	while(ptr->data != val) {
 		ptr = ptr->next;
-		if (ptr == NULL) {
-			printf("List overflow, there are less than %d elements in the list.", loc);
-			return;
-		}
 	}
-	trgt->next = ptr->next;
-	free(ptr);
+
+	if (ptr->next == NULL) {
+		printf("\nCan't delete\n");
+	} else if (ptr->next-> next == NULL) {
+		ptr->next = NULL;
+	} else {
+		temp = ptr->next;
+		ptr->next = temp->next;
+		temp->next->prev = ptr;
+		free(temp);
+	}
 }
 
 void

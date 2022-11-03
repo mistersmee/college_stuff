@@ -35,9 +35,10 @@ dequeue()
 		printf("\nThe dequeued element is %d", queue[front]);
 		front=(front + 1) % max;
 	}
+	return 0;
 }
 
-void 
+void
 display() {
         int i;
         if(front == -1 && rear == -1) {

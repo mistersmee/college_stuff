@@ -1,6 +1,6 @@
 public class practical24092022 {
 	public static void main (String[] args) {
-		helloworld();	
+		helloworld();
 		addition();
 		printest();
 		datatypes();

@@ -1,4 +1,4 @@
-public class Person {    
+public class Person {
     String name;
     int age;
     Person() {
@@ -18,15 +18,15 @@ public class Person {
     public static void main(String args[]) {
         	Person James = new Person();
         	James.talk();
-        	
+
             Person Emma = new Person("Emma", 25);
             Emma.talk();
     }
 }
 
 /*  Q1:
- *    
- *   The output of Question 1 is: 
+ *
+ *   The output of Question 1 is:
  *        Hello I am null
  *        My age is: 0
  *

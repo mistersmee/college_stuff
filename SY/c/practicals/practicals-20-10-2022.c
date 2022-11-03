@@ -3,7 +3,7 @@
 int choice, item, rear = -1, front = -1, i;
 
 int queue[5], max = 5;
-	
+
 
 void enq();
 void deq();
@@ -53,14 +53,14 @@ enq()
 	} else {
 		printf("Enter the element you want to insert:");
 		scanf("%d", &item);
-		
+
 		queue[rear] = item;
 		printf("Item inserted.");
 		rear++;
 	}
 }
 
-void 
+void
 deq()
 {
     if (front == - 1 || front > rear)
@@ -73,7 +73,7 @@ deq()
     }
 }
 
-void 
+void
 displaylq() {
 	printf("The queue is:");
 	for (i = 0; i < rear; i++) {
