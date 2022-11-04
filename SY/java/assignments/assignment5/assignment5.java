@@ -1,9 +1,8 @@
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class assignment5 {
-    public static void q1() {
 
+    public static void q1() {
         String str = "My College Name is KIT KIT is in Kolhapur";
         String findstr = "KIT";
         int lastindex = 0;
@@ -142,18 +141,36 @@ public class assignment5 {
         }
     }
 
-    public static void q9() {
+    public static void q9 () {
+       String str = "bbthhfccuukkllrr";
+       StringBuilder strnew = new StringBuilder();
+        for (int i = 0; i < str.length(); i++) {
+            if (str.indexOf(str.charAt(i), str.indexOf(str.charAt(i)) + 1) == -1) {
+                strnew.append(str.charAt(i));
+            }
+        }
+        System.out.println("The original string is: " + str);
+        System.out.println("The string after removing all instances of duplicate characters becomes: " + strnew);
+    }
+
+    public static void q10() {
+        String str = "Hello this is a book on java.";
+        String[] arrOfStr = str.split(" ");
+        for (String a : arrOfStr) {
+            System.out.println(a);
+        }
     }
 
     public static void main(String args[]) {
-//        q1();
-//        q2();
-//        q3();
-//        q4();
-//        q5();
-//        q6();
-//        q7();
-//        q8();
+        q1();
+        q2();
+        q3();
+        q4();
+        q5();
+        q6();
+        q7();
+        q8();
         q9();
+        q10();
     }
 }
