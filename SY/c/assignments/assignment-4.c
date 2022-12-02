@@ -63,14 +63,14 @@ enq()
 void
 deq()
 {
-    if (front == - 1 || front > rear)
+    if (front == -1 || front > rear)
     {
         printf("Queue Underflow \n");
-        return ;
+        return;
     } else {
         printf("Element deleted from queue is : %d\n", queue[front]);
         queue[front] = 0;
-		front = front + 1;
+	front = front + 1;
     }
 }
 

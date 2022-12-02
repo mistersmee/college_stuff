@@ -1,14 +1,14 @@
 #include <stdio.h>
 
-int 
-main() 
+int
+main()
 {
     int key, i = 0, mid, low, high, num, flag = 0;
-   
+
     printf("Enter the number of elements you want in array:");
     scanf("%d", &num);
     int arr[num];
-   
+
     for (i = 0; i < num; i++) {
         printf("Enter the numbers in array:");
         scanf("%d", &arr[i]);

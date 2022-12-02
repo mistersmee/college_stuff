@@ -9,7 +9,7 @@ towerofh(int n, char from_to, char aux_to, char dest_to)
 	      } else if (n == 1){
 		     printf("\nThe ring no. %d is moving from tower %c to tower %c", n, from_to, dest_to);
 	      } else {
-		towerofh(n-1, from_to,	dest_to, aux_to);
+		towerofh(n-1, from_to, dest_to, aux_to);
 		printf("\nThe ring no. %d is moving from tower %c to tower %c", n, from_to, dest_to);
 		towerofh(n-1, aux_to, from_to, dest_to);
 	      }

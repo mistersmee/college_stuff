@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int
-main() 
+main()
 {
     int key, i = 0, num;
     printf("Enter the number of elements you want in array:");
@@ -10,8 +10,8 @@ main()
     for (i = 0; i < num; i++) {
         printf("Enter the numbers in array:");
         scanf("%d", &arr[i]);
-    }    
-    
+    }
+
     printf("Enter the key you want to search:");
     scanf("%d", &key);
 

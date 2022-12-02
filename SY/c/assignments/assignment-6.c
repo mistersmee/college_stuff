@@ -160,7 +160,7 @@ randomdelete()
 	struct node *ptr, *trgt;
 	int i, loc;
 
-	printf("Enter the location you want to insert data at:");
+	printf("Enter the location you want to delete data at:");
 	scanf("%d", &loc);
 
 	ptr = head;
