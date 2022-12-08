@@ -4,7 +4,7 @@ public class Teacher{
 	String name;
 	String department;
 	float sal;
-	
+
 	//setter method to store id
 	void setID(int id){
 		this.id=id;
@@ -13,7 +13,7 @@ public class Teacher{
 	int getId(){
 		return id;
 	}
-	
+
 	void setName (String name) {
 		this.name = name;
 	}
@@ -41,14 +41,14 @@ public class Teacher{
 	public static void main(String args[]){
 		// create object to store Teacher Information
 		Teacher t = new Teacher();
-		
+
 		// Store data into objects using setter method
 		t.setID(107);
 
 		t.setName("Smee");
 		t.setDept("AIML");
 		t.setSal(99999999.9f);
-		
+
 		// retrieve data using getter methods and display
 		System.out.println("ID= "+t.getId());
 		System.out.println("Name= "+t.getName());

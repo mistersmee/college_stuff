@@ -24,7 +24,7 @@ main()
 			printf("\nThe iteration number %d, sort number %d array looks like:", i, j);
 			for (k = 0; k < num; k++) {
 				printf(" %d ", arr[k]);
-			}		
+			}
 		}
 	}
 	printf("\nThe final sorted array becomes:");

@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 int
-main() 
+main()
 {
 	int arr[100], i, j, k, temp, positions, num;
 
@@ -12,7 +12,7 @@ main()
 	for (i = 0; i < num; i++) {
 		printf("Enter the elements in array:");
 		scanf("%d", &arr[i]);
-	}	
+	}
 
 
 	for (i = 0; i < num - 1; i++) {
@@ -27,7 +27,7 @@ main()
 				temp = arr[i];
 				arr[i] = arr[positions];
 				arr[positions] = temp;
-			}	
+			}
 		}
 	}
 
