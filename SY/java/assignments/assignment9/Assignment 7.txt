@@ -1,0 +1,23 @@
+Assignment 7:
+
+Topics Implementation – Interface, Inheritance and Packaging
+
+class Person{
+    int Id;
+    String Name;
+}
+
+class Employee extends Person{
+
+    String Post;
+    int Salary;
+    int ManagerID;
+    boolean IsManager;
+}
+
+class Manager extends Employee{
+    String Department;
+}
+
+1. Provide Menu with options
+    1. Create Manager 2. Create Employee 3. Display 
