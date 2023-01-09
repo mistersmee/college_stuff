@@ -37,7 +37,7 @@ class Bike extends Vehicle implements TwoWheel{
 
 class Car extends Vehicle implements FourWheel{
 	int cc;
-	int wheels = 4;	
+	int wheels = 4;
 
 	public int noOfWheels() {
 		return this.wheels;

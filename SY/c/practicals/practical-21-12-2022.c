@@ -58,7 +58,7 @@ main()
 	} while (ch == 'Y'|| ch == 'y');
 }
 
-void 
+void
 insert(struct node **p,int num)
 {
 	if ((*p) == NULL) {
@@ -84,7 +84,7 @@ insert(struct node **p,int num)
  	return;
 }
 
-void 
+void
 inorder(struct node *p)
 {
 	if(p != NULL) {
@@ -96,7 +96,7 @@ inorder(struct node *p)
 	}
 }
 
-void 
+void
 preorder(struct node *p)
 {
 	if(p != NULL) {
@@ -108,7 +108,7 @@ preorder(struct node *p)
 	}
 }
 
-void 
+void
 postorder(struct node *p)
 {
 	if(p != NULL) {
