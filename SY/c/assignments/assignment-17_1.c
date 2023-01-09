@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+// Implementation of Graph Traversal using DFS
+
 struct node {
   int vertex;
   struct node* next;

@@ -1,5 +1,7 @@
 #include <stdio.h>
 
+// Implementation of Binary Search
+
 int
 main()
 {

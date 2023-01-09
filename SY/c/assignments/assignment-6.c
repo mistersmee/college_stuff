@@ -1,6 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+// Implementation of singly linked list
+
+
 struct node {
 	int data;
 	struct node *next;

@@ -1,6 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+// Demonstration of C programming concepts
+// 1. Write a C program to find whether a give number is prime number of composite number? 
+// 2. Write a C program to find all prime numbers upto a given input number  ‘n’? 
+
 // Check if number is prime or not
 
 int

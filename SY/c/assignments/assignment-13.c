@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+// Implementation of stack using linked list
+
 void push();
 void pop();
 void display();

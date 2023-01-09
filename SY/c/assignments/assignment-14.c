@@ -1,7 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void 
+// Implementation of insertion sort
+
+void
 insert(int a[], int n)
 {
     int i, j, temp;
@@ -9,11 +11,11 @@ insert(int a[], int n)
         temp = a[i];
         j = i - 1;
 
-        while(j >= 0 && temp <= a[j]) {       
-            a[j+1] = a[j];   
-            j = j - 1;    
-        }   
-        a[j+1] = temp; 
+        while(j >= 0 && temp <= a[j]) {
+            a[j+1] = a[j];
+            j = j - 1;
+        }
+        a[j+1] = temp;
         printf("\nThe iteration number %d looks like:", i);
 		for (int k = 0; k < n; k++) {
 			printf(" %d ", a[k]);
@@ -21,7 +23,7 @@ insert(int a[], int n)
     }
 }
 
-void 
+void
 printArr(int a[], int n)
 {
     int i;
@@ -30,7 +32,7 @@ printArr(int a[], int n)
     }
 }
 
-int 
+int
 main()
 {
     int a[] = { 12, 31, 25, 8, 32, 17 };
@@ -38,7 +40,7 @@ main()
     printf("Before sorting array elements are - \n");
     printArr(a, n);
     insert(a, n);
-    printf("\nAfter sorting array elements are - \n");  
+    printf("\nAfter sorting array elements are - \n");
     printArr(a, n);
 
     return 0;

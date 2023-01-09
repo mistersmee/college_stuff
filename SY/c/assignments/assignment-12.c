@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+// Implementation of selection sort
+
 int
 main()
 {

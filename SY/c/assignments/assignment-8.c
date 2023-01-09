@@ -1,6 +1,7 @@
-#include <stdio.h> 
+#include <stdio.h>
 #include <stdlib.h>
 
+// Implementation of Queue using linked list
 
 struct node {
     int data;

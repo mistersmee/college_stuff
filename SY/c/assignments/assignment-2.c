@@ -1,6 +1,10 @@
 #include <stdio.h>
 #include <math.h>
 
+// Implementation of Recursion in Tower of Hanoi & Ackermann's Function
+// 1.Write a C program to demonstrate Tower of Hanoi problem using RECURSION.
+// 2.Write a C program to demonstrate Ackermann's Function problem using RECURSION.
+
 int
 towerofh(int n, char from_to, char aux_to, char dest_to)
 {

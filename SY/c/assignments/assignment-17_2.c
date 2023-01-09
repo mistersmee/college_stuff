@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #define SIZE 40
 
+// Implementation of Graph traversal using BFS
+
 struct queue {
   int items[SIZE];
   int front;

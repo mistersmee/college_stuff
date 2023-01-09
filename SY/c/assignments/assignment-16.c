@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+// Implementation of Tree traversal: Inorder, Preoder and Postorder
+
 struct node {
   int item;
   struct node* left;

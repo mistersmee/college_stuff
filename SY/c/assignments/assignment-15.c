@@ -1,6 +1,8 @@
 #include <stdio.h>
 
-int 
+// Implementation of Quick sort
+
+int
 partition (int a[], int start, int end)
 {
     int pivot = a[end];
@@ -20,10 +22,10 @@ partition (int a[], int start, int end)
     return (i + 1);
 }
 
-void 
-quick(int a[], int start, int end, int n, int i) 
+void
+quick(int a[], int start, int end, int n, int i)
 {
-    if (start < end) {  
+    if (start < end) {
         printf("\nThe iteration number %d looks like:", i);
 		for (int k = 0; k < n; k++) {
 			printf(" %d ", a[k]);
@@ -36,7 +38,7 @@ quick(int a[], int start, int end, int n, int i)
 }
 
 
-void 
+void
 printArr(int a[], int n)
 {
     int i;
@@ -45,7 +47,7 @@ printArr(int a[], int n)
     }
 }
 
-int 
+int
 main()
 {
     int a[] = { 24, 9, 29, 14, 19, 27 };
@@ -54,7 +56,7 @@ main()
     printf("Before sorting array elements are - \n");
     printArr(a, n);
     quick(a, 0, n - 1, n, i);
-    printf("\nAfter sorting array elements are - \n");  
+    printf("\nAfter sorting array elements are - \n");
     printArr(a, n);
 
     return 0;

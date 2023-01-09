@@ -1,5 +1,7 @@
 #include <stdio.h>
 
+// Linear Queue using array
+
 int choice, item, rear = -1, front = -1, i;
 
 int queue[5], max = 5;
