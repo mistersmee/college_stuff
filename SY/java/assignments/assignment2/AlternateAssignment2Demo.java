@@ -1,5 +1,5 @@
 import java.util.Scanner;
-import java. lang. Math. *;
+import java.lang.Math.*;
 
 public class AlternateAssignment2Demo {
     public static void main(String args[]){
