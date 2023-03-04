@@ -1,7 +1,7 @@
 # write a python program to accept a string value and display the reverse of it
 # write a python program to read a 4 digit number and display the sum of the digits
 # write a program to read a string and check if it is palindrome
-# write a python program to accept a 5 digit number and display the reverse of 
+# write a python program to accept a 5 digit number and display the reverse of
 
 string =input("enter a string: ")
 reverse_string=string[::-1]
@@ -13,10 +13,10 @@ reverse_string=string[::-1]
 
 if string == reverse_string:
         print ("this string is palindrome.")
-        
+
 else :
     print("entered string is not a palindrome.")
-    
+
 def add (x,y):
     return x+y
 def sub(x,y):
@@ -28,28 +28,28 @@ def div(X,Y):
 
 
 def ello():
-   
+
     print("1.additon\n2.subtraction\n3.multiply\n4.division")
     choice = int(input ("enter no : "))
     a = int(input ("enter first no : "))
     b = int(input ("enter second no : "))
-    
-    
-    
+
+
+
     if choice == 1:
         print  ("display addition: ",add(a,b))
     elif choice == 2:
         print  ("display subtraction: ",sub(a,b))
 
     elif choice == 3:
-        print  ("display multiply: ",multiply(a,b)) 
+        print  ("display multiply: ",multiply(a,b))
 
     elif choice == 4:
         print  ("display division: ",div(a,b))
     else:
         print("Invalid input")
-        
-ello() 
+
+ello()
 
 
 number = int(input("Enter a 4-digit number: "))

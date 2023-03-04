@@ -7,18 +7,18 @@
 def longestLength(a):
     max1 = len(a[0])
     temp = a[0]
- 
+
     # for loop to traverse the list
     for i in a:
         if(len(i) > max1):
- 
+
             max1 = len(i)
             temp = i
- 
+
     print("The word with the longest length is:", temp,
           " and length is ", max1)
- 
- 
+
+
 # Driver Program
 a = []
 
@@ -53,4 +53,3 @@ print("The average of 10 students marks is" + avg)
 # Program 3
 
 alphabet = {}
-
