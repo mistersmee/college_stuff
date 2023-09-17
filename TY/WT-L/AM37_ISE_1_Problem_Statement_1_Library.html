@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Library</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-control {
+            margin-bottom: 10px;
+        }
+
+        label {
+            font-weight: bold;
+            color: #333;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .button-container {
+            text-align: center;
+        }
+
+        .message {
+            text-align: center;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Library</h2>
+        <form id="libraryForm">
+            <div class="form-control">
+                <label for="fullName">Student's Full Name:</label>
+                <input type="text" id="fullName" name="fullName" required>
+            </div>
+            <div class="form-control">
+                <label for="prn">PRN:</label>
+                <input type="text" id="prn" name="prn" required>
+            </div>
+            <div class="form-control">
+                <label for="bookName">Name of Book:</label>
+                <input type="text" id="bookName" name="bookName" required>
+            </div>
+            <div class="form-control">
+                <label for="daysLate">Date of Checkout of Book:</label>
+                <input type="text" id="SubDays" name="SubDays">
+            </div>
+            <div class="button-container">
+                <button type="button" onclick="ReturnDateFunc()">Show Return Date</button>
+            </div>
+            <div class="form-control">
+                <label>Due Return Date:</label>
+                <div class="message" id="RD"></div>
+            </div>
+            <div class="form-control">
+                <label for="daysLate">Number of Days Late:</label>
+                <input type="text" id="daysLate" name="daysLate">
+            </div>
+            <div class="button-container">
+                <button type="button" onclick="calculateFine()">Calculate Fine</button>
+            </div>
+                <div class="message" id="errorMessage" style="color: red;"></div>
+                <div class="message" id="successMessage" style="color: green;"></div>
+        </form>
+    </div>
+
+    <script>
+        function calculateFine() {
+            const daysLate = parseInt(document.getElementById('daysLate').value);
+            if (daysLate > 0) {
+                const fineAmount = daysLate * 2;
+                    document.getElementById('errorMessage').textContent = `Fine Amount: ${fineAmount} INR`;
+                    document.getElementById('successMessage').textContent = "";
+            } else {
+                    document.getElementById('successMessage').textContent = "You have returned the book within due return date, Good Job! No fine applicable.";
+                    document.getElementById('errorMessage').textContent = "";
+            }
+        }
+
+        function ReturnDateFunc() {
+                const inputDateElement = document.getElementById('SubDays');
+                const resultElement = document.getElementById('RD');
+                const inputDate = inputDateElement.value;
+
+                const datePattern = /^\d{4}-\d{2}-\d{2}$/;
+                if (!datePattern.test(inputDate)) {
+                    resultElement.textContent = "Invalid date format. Please use yyyy-mm-dd.";
+                    return;
+                }
+                const [year, month, day] = inputDate.split("-").map(Number);
+
+                const currentDate = new Date(year, month - 1, day);
+
+                const newDate = new Date(currentDate);
+                newDate.setDate(currentDate.getDate() + 7);
+
+                const yearAfter7Days = newDate.getFullYear();
+                const monthAfter7Days = String(newDate.getMonth() + 1).padStart(2, "0");
+                const dayAfter7Days = String(newDate.getDate()).padStart(2, "0");
+                const resultDate = `${yearAfter7Days}-${monthAfter7Days}-${dayAfter7Days}`;
+                resultElement.textContent = `${resultDate}`;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-control {
+            margin-bottom: 10px;
+        }
+
+        label {
+            font-weight: bold;
+            color: #333;
+        }
+
+        input[type="text"],
+        input[type="date"],
+        select {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="radio"] {
+            margin-right: 5px;
+        }
+
+        .error {
+            color: #ff0000;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>User Registration</h2>
+        <form id="registrationForm" onsubmit="return validateForm()">
+            <div class="form-control">
+                <label for="userName">User Name:</label>
+                <input type="text" id="userName" name="userName" required>
+            </div>
+            <div class="form-control">
+                <label>Gender:</label>
+                <input type="radio" id="male" name="gender" value="Male"> Male
+                <input type="radio" id="female" name="gender" value="Female"> Female
+            </div>
+            <div class="form-control">
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" required>
+            </div>
+            <div class="form-control">
+                <label for="state">State:</label>
+                <select id="state" name="state" required>
+                    <option value="">Select State</option>
+                    <option value="State1">State 1</option>
+                    <option value="State2">State 2</option>
+                    <option value="State3">State 3</option>
+                    <option value="State4">State 4</option>
+                    <option value="State5">State 5</option>
+                </select>
+            </div>
+            <div class="form-control">
+                <label for="pinCode">Pin Code:</label>
+                <input type="text" id="pinCode" name="pinCode" pattern="[0-9]{6}" required>
+            </div>
+            <div class="form-control">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-control">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" minlength="4" required>
+            </div>
+            <div class="form-control">
+                <label for="confirmPassword">Confirm Password:</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" required>
+            </div>
+            <div class="form-control">
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+        <div class="error" id="errorMessage"></div>
+    </div>
+
+    <script>
+        function validateForm() {
+            var userName = document.getElementById('userName').value;
+            var gender = document.querySelector('input[name="gender"]:checked');
+            var dob = document.getElementById('dob').value;
+            var state = document.getElementById('state').value;
+            var pinCode = document.getElementById('pinCode').value;
+            var email = document.getElementById('email').value;
+            var password = document.getElementById('password').value;
+            var confirmPassword = document.getElementById('confirmPassword').value;
+            var errorMessage = document.getElementById('errorMessage');
+
+            // Validation logic for each field
+            if (!/^[a-zA-Z\s]+$/.test(userName)) {
+                errorMessage.textContent = "Invalid User Name. Only alphabets and spaces allowed.";
+                return false;
+            }
+
+            if (!gender) {
+                errorMessage.textContent = "Please select a gender.";
+                return false;
+            }
+
+            if (!/^\d{4}-\d{2}-\d{2}$/.test(dob)) {
+                errorMessage.textContent = "Invalid Date of Birth. Use the format YYYY-MM-DD.";
+                return false;
+            }
+
+            if (state === "") {
+                errorMessage.textContent = "Please select a state.";
+                return false;
+            }
+
+            if (!/^\d{6}$/.test(pinCode)) {
+                errorMessage.textContent = "Invalid Pin Code. Must be 6 digits.";
+                return false;
+            }
+
+            if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
+                errorMessage.textContent = "Invalid Email address.";
+                return false;
+            }
+
+            if (password.length < 4) {
+                errorMessage.textContent = "Password must be at least 4 characters long.";
+                return false;
+            }
+
+            if (password !== confirmPassword) {
+                errorMessage.textContent = "Passwords do not match.";
+                return false;
+            }
+
+            // If all validations pass, submit the form
+            errorMessage.textContent = "";
+            return true;
+        }
+    </script>
+</body>
+</html>
