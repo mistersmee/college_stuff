@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>User Registration</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #ECEFF4;
+      }
+      .container {
+        width: 50%;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      .form-group {
+        margin-bottom: 15px;
+      }
+      label {
+        font-weight: bold;
+        color: #333;
+      }
+      input[type="text"],
+      input[type="email"],
+      input[type="password"],
+      select,
+      input[type="date"] {
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+      input[type="radio"] {
+        margin-right: 5px;
+      }
+      #success-message {
+        color: green;
+        margin-top: 10px;
+      }
+      #error-message {
+        color: red;
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>User Registration</h2>
+      <form id="registration-form" onsubmit="return validateForm()">
+        <div class="form-group">
+          <label for="username">User Name:</label>
+          <input type="text" id="username" name="username" required />
+        </div>
+        <div class="form-group">
+          <label>Gender:</label>
+          <input type="radio" name="gender" value="Male" /> Male
+          <input type="radio" name="gender" value="Female" /> Female
+        </div>
+        <div class="form-group">
+          <label for="dob">Date of Birth:</label>
+          <input type="date" id="dob" name="dob" required />
+        </div>
+        <div class="form-group">
+          <label for="state">State:</label>
+          <select id="state" name="state" required>
+            <option value="State 1">State 1</option>
+            <option value="State 2">State 2</option>
+            <option value="State 3">State 3</option>
+            <option value="State 4">State 4</option>
+            <option value="State 5">State 5</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="pincode">Pin Code:</label>
+          <input
+            type="text"
+            id="pincode"
+            name="pincode"
+            pattern="[0-9]{6}"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            minlength="4"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="confirm-password">Confirm Password:</label>
+          <input
+            type="password"
+            id="confirm-password"
+            name="confirm-password"
+            minlength="4"
+            required
+          />
+        </div>
+        <button type="submit">Submit</button>
+      </form>
+      <div id="success-message" style="display: none">
+        Registration Successful!
+      </div>
+      <div id="error-message" style="display: none"></div>
+    </div>
+
+    <script>
+      function validateForm() {
+        document.getElementById("success-message").style.display = "block";
+        return false;
+      }
+    </script>
+  </body>
+</html>
