@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Registration</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      color: #333;
+    }
+
+    .container {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    select,
+    input[type="date"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      font-size: 16px;
+      color: #333;
+    }
+
+    input[type="radio"] {
+      margin-right: 5px;
+    }
+
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h2>User Registration</h2>
+    <form id="registrationForm" onsubmit="return validateForm()">
+      <label for="userName">User Name:</label>
+      <input type="text" id="userName" name="userName" placeholder="First Name Last Name" required
+        pattern="[A-Za-z\s]+"><br>
+
+      <label>Gender:</label>
+      <input type="radio" id="male" name="gender" value="Male">Male
+      <input type="radio" id="female" name="gender" value="Female">Female<br>
+
+      <label for="dob">Date of Birth:</label>
+      <input type="date" id="dob" name="dob" required><br>
+
+      <label for="state">State:</label>
+      <select id="state" name="state">
+        <option value="State1">State 1</option>
+        <option value="State2">State 2</option>
+        <option value="State3">State 3</option>
+        <option value="State4">State 4</option>
+        <option value="State5">State 5</option>
+      </select><br>
+
+      <label for="pinCode">Pin Code:</label>
+      <input type="text" id="pinCode" name="pinCode" placeholder="123456" required pattern="[0-9]{6}"><br>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="example@example.com" required><br>
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" minlength="4" required><br>
+
+      <label for="confirmPassword">Confirm Password:</label>
+      <input type="password" id="confirmPassword" name="confirmPassword" minlength="4" required><br>
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <div id="registrationResult" style="display: none;">
+      <h3>Registration Successful</h3>
+      <p>User Information:</p>
+      <p id="userInfo"></p>
+    </div>
+  </div>
+
+  <script>
+    function validateForm() {
+      var userName = document.getElementById("userName").value;
+      var gender = document.querySelector('input[name="gender"]:checked');
+      var dob = document.getElementById("dob").value;
+      var state = document.getElementById("state").value;
+      var pinCode = document.getElementById("pinCode").value;
+      var email = document.getElementById("email").value;
+      var password = document.getElementById("password").value;
+      var confirmPassword = document.getElementById("confirmPassword").value;
+
+      if (password !== confirmPassword) {
+        alert("Passwords do not match.");
+        return false;
+      }
+
+
+      var userInfo = `User Name: ${userName}<br>
+                            Gender: ${gender ? gender.value : ''}<br>
+                            Date of Birth: ${dob}<br>
+                            State: ${state}<br>
+                            Pin Code: ${pinCode}<br>
+                            Email: ${email}`;
+
+      document.getElementById("userInfo").innerHTML = userInfo;
+      document.getElementById("registrationResult").style.display = "block";
+
+      return false;
+    }
+  </script>
+</body>
+
+</html>
