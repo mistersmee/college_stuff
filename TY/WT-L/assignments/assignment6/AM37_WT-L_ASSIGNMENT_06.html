@@ -51,7 +51,15 @@
       <form id="registration-form" onsubmit="return validateForm()">
         <div class="form-group">
           <label for="username">User Name:</label>
-          <input type="text" id="username" name="username" required />
+          <input
+            type="text"
+            id="username"
+            name="username"
+            placeholder="First Name Last Name"
+            required
+            pattern="[A-Za-z\s]+"
+          ><br>
+
         </div>
         <div class="form-group">
           <label>Gender:</label>
@@ -79,12 +87,19 @@
             id="pincode"
             name="pincode"
             pattern="[0-9]{6}"
+            placeholder="123456"
             required
-          />
+          >
         </div>
         <div class="form-group">
           <label for="email">Email:</label>
-          <input type="email" id="email" name="email" required />
+          <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="example@example.com"
+          required
+          >
         </div>
         <div class="form-group">
           <label for="password">Password:</label>
@@ -112,10 +127,39 @@
         Registration Successful!
       </div>
       <div id="error-message" style="display: none"></div>
+      <div id="registrationResult" style="display: none;">
+        <h3>Registration Successful</h3>
+        <p>User Information:</p>
+        <p id="userInfo"></p>
+      </div>
     </div>
 
     <script>
       function validateForm() {
+        var username = document.getElementById("username").value;
+        var gender = document.querySelector('input[name="gender"]:checked');
+        var dob = document.getElementById("dob").value;
+        var state = document.getElementById("state").value;
+        var pincode = document.getElementById("pincode").value;
+        var email = document.getElementById("email").value;
+        var password = document.getElementById("password").value;
+        var confirmpassword = document.getElementById("confirm-password").value;
+
+        if (password !== confirmpassword) {
+          alert("Passwords do not match.");
+          return false;
+        }
+
+
+        var userInfo = `User Name: ${username}<br>
+                            Gender: ${gender ? gender.value : ''}<br>
+                            Date of Birth: ${dob}<br>
+                            State: ${state}<br>
+                            Pin Code: ${pincode}<br>
+                            Email: ${email}`;
+
+        document.getElementById("userInfo").innerHTML = userInfo;
+        document.getElementById("registrationResult").style.display = "block";
         document.getElementById("success-message").style.display = "block";
         return false;
       }
