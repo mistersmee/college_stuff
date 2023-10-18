@@ -1,0 +1,68 @@
+Step 1. Install Python
+
+As I use Linux, I installed Python by running command, `sudo pacman -S python`, as pacman is my package manager of choice, and `python` is the package for my linux distribution for Python.
+
+follow the video and Perform Tests :
+1. Test IDLE Feature on your system - IDLE is automatically installed as part of the python package, and can be launched by using the `idle` command in the terminal
+2. Test Python App on your system - a binary `python` is also provided, which allows us to use a Python command line.
+
+Python Installation Path = The binary is located in /usr/bin, while the library files are located in /usr/lib/python3.11/
+
+Step 2. Check the Python Version using Command prompt
+
+python --version
+
+Console output = Python 3.11.5
+
+Step 3. Verify Pip is avaiable using command prompt
+
+pip -v OR ( pip -V) OR pip --version
+
+Correct Command = pip --version or pip -V are both correct
+Console output = pip 23.2.1 from /usr/lib/python3.11/site-packages/pip (python 3.11)
+
+Step 4. Install Virtual Environment
+
+We use a module named virtualenv which is a tool to create isolated Python environments.
+virtualenv creates a folder that contains all the necessary executables to use the packages
+that a Python project would need.
+
+On my Linux distribution, as per the PEP 668 directive by the Python project, pip cannot install modules directly in order to minimise conflicts with system package manager. So, I used the command `sudo pacman -S python-virtualenv` to install the virtualenv module.
+
+
+Step 5 : Create a working Virtual Environment
+
+I created a folder called project
+
+mkdir project
+cd project
+virtualenv venv
+
+To activate the virtual environment on linux, we use command: `source venv/bin/activate`
+
+Step 6 :  Install Flask
+
+
+As we are now in a virtualenv, the PEP 668 directive no longer applies, as in a virtual environment, we cannot interact with the system python packages and as such, we can use pip safely. So, use following command to install flask.
+
+`pip install Flask`
+
+Step 7 : Create a demo flask application
+
+Refer https://www.tutorialspoint.com/flask/flask_quick_guide.htm
+
+Create File Hello.py
+
+from flask import Flask
+app = Flask(__name__)
+
+@app.route('/')
+def hello_world():
+   return 'Hello World’
+
+if __name__ == '__main__':
+   app.run()
+
+Test the code on console : Python Hello.py
+
+Test the code on Browser by copying the URL : http://127.0.0.1:5000/
