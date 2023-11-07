@@ -1,0 +1,45 @@
+
+FastAPI Environment Set up:
+
+1. To install FastAPI (preferably in a virtual environment), use pip installer.
+FastAPI depends on Starlette and Pydantic libraries, hence they also get installed.
+
+2. Installing Uvicorn using PIP 
+To run FastAPI app, you need an ASGI server called uvicorn, so install the same too, using pip installer. 
+It will also install uvicorn’s dependencies - asgiref, click, h11, and typing-extensions
+
+3. Save the the code as main.py
+
+Commands:
+
+--> pip3 install fastapi
+--> pip3 install uvicorn
+
+** Sample code : main.py
+
+from fastapi import FastAPI
+app = FastAPI()
+@app.get("/")
+async def root():
+    return {"message": "Hello World"}
+
+command to run this file:
+
+--> uvicorn main:app --reload
+
+Expected Output :
+
+INFO: Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+INFO: Started reloader process [28720]
+INFO: Started server process [28722]
+INFO: Waiting for application startup.
+INFO: Application startup complete.
+
+
+Try This url :
+
+http://127.0.0.1:8000/docs
+
+4. Run Full Application Together 
+
+--> python app.py

@@ -1,0 +1,55 @@
+
+Steps to Deploy the Code on your Production System:
+
+Application SetUp :
+
+1. Create a Folder = StudentDemo
+2. Create Virtual Env =  virtualenv venv
+3. Activate Your Virtaul Env = /venv/Scripts/activate
+4. Test Python version and Pip Version is available
+5. Test Flask is already installed on your machine = python -m flask --version
+6. Set up all the Attached file in StudentDemo folder [ create templates folder to save all html files]
+
+
+
+SQLite DataBase Set Up :
+
+7. Use Step No 7 if you are using SQLite Database
+ 7.1 Install  DB Browser for SQLite : https://sqlitebrowser.org/dl/
+     Db Browser is similar to SQL workbech UI to access the sqlite database
+ 7.2 Create and Test SQL light Databse using file :- DBConnect
+ 7.3 Create 2 Tables :
+		CREATE TABLE students (name , addr , city , pin )
+		Create Table studentsmarks (name , CGPI)
+
+
+MySql Database Set Up :
+
+8. Use Step No 8 if you are going to configure mysql database
+ 8.1 Create Database = stud
+ 8.2 Create 2 Tables :
+
+ Sqlite Syntax : CREATE TABLE students (name TEXT, addr TEXT, city TEXT, pin TEXT)
+ Mysql Syntax : Update your syntax here
+
+
+ CREATE TABLE students (name , addr , city , pin )
+ Create Table studentsmarks (name , CGPI)
+
+Application UI Set Up:
+
+9. Copy all html in /{StudentDemo}/templates folder , {StudentDemo} = your application folder
+
+Testing :
+
+10. Start your application using command = python StudentApplication.python
+
+  URL = http://127.0.0.1:5000
+
+  10.1 Insert your own record using the URL
+  10.2 Check Go back to home page link is working
+  10.3 Check List Url is working
+
+11. Change Request of Seach Student with Name and Print his Marksheet
+
+ 11.1 Crate required routes, Functions, and HTML pages

@@ -1,0 +1,17 @@
+
+FastApi Write Up:
+
+1. What is FastAPI? Describe the history of FastApi
+
+2. Explain the component of FastAPI framework. 
+
+[ Expected Answer : FastAPI internal Architecture like Servers, JSON ect]
+
+3. Write steps and commands for EnvironmentSetup of FastAPI. 
+
+4. Write the Hello FastApi Sample Code 
+
+5. Write the Output from Console when you Run FastApi Sample Application
+
+
+
