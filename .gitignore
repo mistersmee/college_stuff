@@ -1,4 +1,8 @@
-.vscode
-**/build
+.vscode/
+**/build/
 *.class
 .ipynb_checkpoints/
+venv/
+*.zip
+**/venv/
+**/__pycache__/
