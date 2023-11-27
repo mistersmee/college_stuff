@@ -1,0 +1,40 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Patient</title>
+</head>
+<body>
+    <h1>Search Patient</h1>
+    <form method="post">
+        <label for="search_name">Search by Name:</label>
+        <input type="text" id="search_name" name="search_name" required>
+        <input type="submit" value="Search">
+    </form>
+    <br>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Patient ID</th>
+            <th>Patient Admit Date</th>
+            <th>Room Number</th>
+            <th>Discharge Date</th>
+            <th>Clerk</th>
+        </tr>
+        {% for patient in patients %}
+        <tr>
+            <td>{{ patient[0] }}</td>
+            <td>{{ patient[1] }}</td>
+            <td>{{ patient[2] }}</td>
+            <td>{{ patient[3] }}</td>
+            <td>{{ patient[4] }}</td>
+            <td>{{ patient[5] }}</td>
+            <td>{{ patient[6] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <br>
+    <a href="{{ url_for('home') }}">Back to Home</a>
+</body>
+</html>

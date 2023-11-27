@@ -1,0 +1,5 @@
+id,name,patient_id,patient_admit_date,room_no,discharge_date,clerk
+1,"Aseem Athale",37,2003-08-22,666,2023-08-22,"Aseem Athale"
+2,"Vladimir Putin",4,2023-11-07,2,2023-11-17,"Aseem Athale"
+3,"Joe Biden",3,2023-11-04,33,2023-11-05,"Aseem Athale"
+4,"Justin Trudeau",8,2023-11-10,88,2023-11-11,"Aseem Athale"
