@@ -1,0 +1,11 @@
+Name: Aseem Athale
+Roll No: AM37
+PRN: 2122000421
+Date: 01/12/2023
+
+Features required to test ML model:
+	Age of person and Salary of Person
+
+Logic to pass features to ML model:
+	The ML model is saved in a pickle-format file, which is a method to serialise a Python object structure, which means to make a Python object callable from other files. The model, DecisionTreeClassifier, is called as an object from module scikit-learn and after training it, is then saved as a pickle.
+	We take input of features from user through the HTML page and through requests, convert those features using Numpy to a format which is usable for the model, and pass those features to the model and predict the output using the predict() method, and display the same.

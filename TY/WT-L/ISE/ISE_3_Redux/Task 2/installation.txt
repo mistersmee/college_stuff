@@ -1,0 +1,15 @@
+pip install virtualenv
+
+python -m venv venv
+
+venv/bin/activate
+
+pip install mysql-connector-python
+
+pip install Flask
+
+pip install uvicorn
+
+python app.py
+
+uvicorn main:app --reload

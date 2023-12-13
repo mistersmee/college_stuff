@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Book Result</title>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Quantity</th>
+        <th>Pice</th>
+        <th>Roll_no</th>
+      
+      </tr>
+      {% for row in data %}
+      <tr>
+        <td>{{row[0]}}</td>
+        <td>{{row[1]}}</td>
+        <td>{{row[2]}}</td>
+        <td>{{row[3]}}</td>
+      </tr>
+      {% endfor %}
+      <tr></tr>
+    </table>
+    <br /><br />
+    <a href="/">Return to Home Page</a>
+    <button onclick="window.print()">Print this page</button>
+  </body>
+</html>

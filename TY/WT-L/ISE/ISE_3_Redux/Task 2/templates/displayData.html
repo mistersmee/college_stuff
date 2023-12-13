@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Book Records</title>
+  </head>
+  <body>
+    <h3>Book records</h3>
+    <table id="newtable">
+      <tr>
+        <th>Name</th>
+        <th>Quantity</th>
+        <th>Pice</th>
+        <th>Roll_no</th>
+      </tr>
+      {% for row in data %}
+      <tr>
+        <td>{{row[0]}}</td>
+        <td>{{row[1]}}</td>
+        <td>{{row[2]}}</td>
+        <td>{{row[3]}}</td>
+      </tr>
+      {% endfor %}
+    </table>
+
+    <br /><br />
+
+    <a href="/">Return to the Home page</a>
+  </body>
+</html>

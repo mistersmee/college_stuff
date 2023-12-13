@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>ML API</title>
+  </head>
+
+  <body>
+    <div class="login">
+      <h1>Predict Sale of House based on Age and Salary</h1>
+
+      <form action="{{ url_for('predict')}}" method="post">
+        <label>Age:</label>
+        <input
+          type="text"
+          name="age"
+          placeholder="Age"
+          required="required"
+        />
+        <br /><br />
+        <label>Salary:</label>
+        <input
+          type="text"
+          name="salary"
+          placeholder="Salary"
+          required="required"
+        />
+        <button type="submit" class="btn btn-primary btn-block btn-large">
+          Predict
+        </button>
+      </form>
+      <h1> Person will buy house or not? (0 = will not buy, 1 = will buy) </h1>
+      <br />
+      <br />
+      {{ prediction_text }}
+    </div>
+  </body>
+</html>
