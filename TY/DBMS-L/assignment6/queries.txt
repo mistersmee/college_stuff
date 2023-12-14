@@ -1,0 +1,50 @@
+
+SELECT DISTINCT P.PNo
+FROM PROJECT P
+JOIN WORKS_ON W ON P.PNo = W.PNo
+JOIN EMPLOYEE E ON W.SSN = E.SSN OR E.SSN = P.MgrSSN
+WHERE E.Name = 'Scott';
+
+
+UPDATE EMPLOYEE
+SET Salary = Salary * 1.10
+WHERE SSN IN (
+    SELECT W.SSN
+    FROM WORKS_ON W
+    JOIN PROJECT P ON W.PNo = P.PNo
+    WHERE P.PName = 'IoT'
+);
+
+
+SELECT
+    SUM(Salary) AS TotalSalary,
+    MAX(Salary) AS MaxSalary,
+    MIN(Salary) AS MinSalary,
+    AVG(Salary) AS AvgSalary
+FROM EMPLOYEE
+WHERE DNo = (
+    SELECT DNo
+    FROM DEPARTMENT
+    WHERE DName = 'Accounts'
+);
+
+
+SELECT E.Name
+FROM EMPLOYEE E
+WHERE NOT EXISTS (
+    SELECT P.PNo
+    FROM PROJECT P
+    WHERE P.DNo = 5
+    AND NOT EXISTS (
+        SELECT W.PNo
+        FROM WORKS_ON W
+        WHERE W.SSN = E.SSN AND W.PNo = P.PNo
+    )
+);
+
+
+SELECT D.DNo, COUNT(E.SSN) AS EmployeeCount
+FROM DEPARTMENT D
+JOIN EMPLOYEE E ON D.DNo = E.DNo
+WHERE EmployeeCount > 5 AND E.Salary > 600000
+GROUP BY D.DNo;

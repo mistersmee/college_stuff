@@ -1,0 +1,166 @@
+Certainly! Below are sample SQL functions for the functions you've listed:
+
+### String Functions:
+
+#### CHAR_LENGTH / CHARACTER_LENGTH:
+```sql
+SELECT CHAR_LENGTH('Hello World') AS CharLengthResult;
+SELECT CHARACTER_LENGTH('Hello World') AS CharacterLengthResult;
+```
+
+#### CONCAT:
+```sql
+SELECT CONCAT('Hello', ' ', 'World') AS ConcatenatedString;
+```
+
+#### FORMAT:
+```sql
+SELECT FORMAT(1234567.89, 2) AS FormattedNumber;
+```
+
+#### INSERT:
+```sql
+SELECT INSERT('Hello World', 7, 0, 'Beautiful ') AS InsertedString;
+```
+
+#### UCASE / LCASE:
+```sql
+SELECT UCASE('hello') AS UpperCaseString;
+SELECT LCASE('HELLO') AS LowerCaseString;
+```
+
+#### REPEAT:
+```sql
+SELECT REPEAT('A', 5) AS RepeatedString;
+```
+
+### Numeric Functions:
+
+#### ABS:
+```sql
+SELECT ABS(-5) AS AbsoluteValue;
+```
+
+#### AVG:
+```sql
+SELECT AVG(Salary) AS AverageSalary FROM Employee;
+```
+
+#### COUNT:
+```sql
+SELECT COUNT(*) AS NumberOfRecords FROM YourTable;
+```
+
+#### FLOOR:
+```sql
+SELECT FLOOR(10.75) AS FlooredValue;
+```
+
+#### GREATEST / LEAST:
+```sql
+SELECT GREATEST(5, 3, 9) AS GreatestValue;
+SELECT LEAST(5, 3, 9) AS LeastValue;
+```
+
+#### MAX / MIN:
+```sql
+SELECT MAX(Salary) AS MaxSalary FROM Employee;
+SELECT MIN(Salary) AS MinSalary FROM Employee;
+```
+
+#### MOD:
+```sql
+SELECT MOD(10, 3) AS ModuloResult;
+```
+
+#### SQRT:
+```sql
+SELECT SQRT(25) AS SquareRoot;
+```
+
+#### SUM:
+```sql
+SELECT SUM(Salary) AS TotalSalary FROM Employee;
+```
+
+#### TRUNCATE:
+```sql
+SELECT TRUNCATE(10.7654, 2) AS TruncatedNumber;
+```
+
+### Other Functions:
+
+#### BIN:
+```sql
+SELECT BIN(25) AS BinaryRepresentation;
+```
+
+#### BINARY:
+```sql
+SELECT BINARY 'Hello' AS BinaryString;
+```
+
+#### CAST:
+```sql
+SELECT CAST('123' AS SIGNED) AS CastedNumber;
+```
+
+#### COALESCE:
+```sql
+SELECT COALESCE(NULL, 'Default') AS CoalescedValue;
+```
+
+#### CONNECTION_ID:
+```sql
+SELECT CONNECTION_ID() AS ConnectionID;
+```
+
+#### CONV:
+```sql
+SELECT CONV('3F', 16, 10) AS ConvertedNumber;
+```
+
+#### CONVERT:
+```sql
+SELECT CONVERT('123', SIGNED) AS ConvertedNumber;
+```
+
+#### CURRENT_USER / SESSION_USER / SYSTEM_USER / USER:
+```sql
+SELECT CURRENT_USER() AS CurrentUser;
+SELECT SESSION_USER() AS SessionUser;
+SELECT SYSTEM_USER() AS SystemUser;
+SELECT USER() AS User;
+```
+
+#### DATABASE:
+```sql
+SELECT DATABASE() AS CurrentDatabase;
+```
+
+#### IF:
+```sql
+SELECT IF(5 > 3, 'True', 'False') AS IfResult;
+```
+
+#### IFNULL:
+```sql
+SELECT IFNULL(NULL, 'Default') AS IfNullResult;
+```
+
+#### ISNULL:
+```sql
+SELECT ISNULL(NULL) AS IsNullResult;
+```
+
+#### NULLIF:
+```sql
+SELECT NULLIF('Value', 'Value') AS NullIfResult;
+```
+
+#### VERSION:
+```sql
+SELECT VERSION() AS MySQLVersion;
+```
+
+Please note that these are generic examples, and you should adapt them based on your actual database schema and data. Additionally, some functions may have variations or be specific to certain database systems, so ensure compatibility with your database.
